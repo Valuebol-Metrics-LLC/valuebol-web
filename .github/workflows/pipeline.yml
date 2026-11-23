@@ -1,7 +1,8 @@
 # Runs the UPSL data pipeline (copied from egudino20/amateur-football-dashboard):
 # schedules, results and standings for every season, rosters, goal scorers,
 # then ASI (Elo), Dixon-Coles predictions and projected standings.
-# Output: public/upsl/*.json, committed to main; the Pages deploy picks it up.
+# Output: public/upsl/site.json (the small file the site loads) is committed to main;
+# the big per-step exports stay out of git so the repo doesn't grow every day.
 #
 # First time: Actions > UPSL pipeline > Run workflow > mode "full" (a few hours).
 # After that it runs "update" on its own every day.
@@ -68,7 +69,7 @@ jobs:
         run: |
           git config user.name "valuebol-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/upsl pipeline/upsl/data/premier/models
+          git add public/upsl/site.json pipeline/upsl/data/premier/models
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "UPSL pipeline update $(date -u +%Y-%m-%d)"
           git pull --rebase -X theirs origin main

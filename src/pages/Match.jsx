@@ -7,15 +7,17 @@ import { getMatchBySlug, getRankings, clubPath, matchPath, describeOdds, formatD
 
 /** Turns "7:00 PM" on 2026-11-27 into a calendar timestamp (local time, 2 hours long). */
 function icsTimes(date, time) {
-  const m = /^(\d{1,2}):(\d{2})\s*(AM|PM)$/i.exec(time ?? '');
+  const m = /^(\d{1,2}):(\d{2})\s*(AM|PM)(?:\s*(PT|MT|CT|ET))?$/i.exec(time ?? '');
   if (!m) return null;
+  const zones = { PT: 'America/Los_Angeles', MT: 'America/Denver', CT: 'America/Chicago', ET: 'America/New_York' };
   let h = Number(m[1]) % 12;
   if (m[3].toUpperCase() === 'PM') h += 12;
   const d = date.replace(/-/g, '');
   const pad = (n) => String(n).padStart(2, '0');
   const end = h + 2;
   const endDay = end >= 24 ? String(Number(d) + 1) : d; // good enough for fixture times
-  return [`${d}T${pad(h)}${m[2]}00`, `${endDay}T${pad(end % 24)}${m[2]}00`];
+  const tz = m[4] ? zones[m[4].toUpperCase()] : null;
+  return [`${d}T${pad(h)}${m[2]}00`, `${endDay}T${pad(end % 24)}${m[2]}00`, tz];
 }
 
 function downloadIcs(m) {
@@ -26,7 +28,8 @@ function downloadIcs(m) {
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Valuebol LLC//Match//EN', 'BEGIN:VEVENT',
     `UID:${m.date}-${m.home}-${m.away}@valuebol-metrics.com`.replace(/\s+/g, ''),
     `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
-    `DTSTART:${t[0]}`, `DTEND:${t[1]}`,
+    t[2] ? `DTSTART;TZID=${t[2]}:${t[0]}` : `DTSTART:${t[0]}`,
+    t[2] ? `DTEND;TZID=${t[2]}:${t[1]}` : `DTEND:${t[1]}`,
     `SUMMARY:${m.home} vs ${m.away}`,
     `DESCRIPTION:${m.competition}. Preview: ${url}`,
     'BEGIN:VALARM', 'TRIGGER:-PT1H', 'ACTION:DISPLAY', 'DESCRIPTION:Kick-off in 1 hour', 'END:VALARM',

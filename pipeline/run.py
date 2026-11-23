@@ -91,6 +91,7 @@ def main() -> None:
     step("Team profiles", "upsl.export_teams", *div)
     step("Squads", "upsl.export_squads", *div, allow_fail=True)
     step("Player stats", "upsl.export_player_stats", *div, allow_fail=True)
+    step("Website summary (site.json)", "export_site")
     print("\nDone. Website data is in public/upsl/.")
 
 

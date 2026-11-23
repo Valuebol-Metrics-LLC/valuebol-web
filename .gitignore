@@ -5,3 +5,7 @@ dist
 !.env.example
 .DS_Store
 __pycache__/
+
+# Pipeline exports are rebuilt every run; only the site summary is kept in git
+public/upsl/*.json
+!public/upsl/site.json

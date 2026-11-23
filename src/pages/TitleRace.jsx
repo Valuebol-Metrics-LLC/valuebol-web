@@ -12,7 +12,11 @@ const fmtPct = (x) => (x >= 99.5 ? '100%' : x > 0 && x < 1 ? '<1%' : `${Math.rou
 
 export default function TitleRace() {
   const race = getConferenceRace();
-  const [sel, setSel] = useState(3);
+  // Open on the first club that still has games left and a finish that isn't settled yet.
+  const [sel, setSel] = useState(() => {
+    const i = race.clubs.findIndex((o) => o.projGp > o.gp && Math.max(...o.finish.map(val)) < 99.5);
+    return i >= 0 ? i : 0;
+  });
   const [calls, setCalls] = useState({});
   const c = race.clubs[sel];
   const f = c.finish;

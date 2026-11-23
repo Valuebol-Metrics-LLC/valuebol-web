@@ -26,7 +26,7 @@ function FinishChart({ race, name }) {
           {race.conference}, from {race.runs.toLocaleString('en-US')} simulated seasons. Now {race.pts} pts from {race.gp} games.
         </p>
       </div>
-      <div className="finish-bars" role="img" aria-label={`${name} finishing position chances`}>
+      <div className="finish-bars" style={{ gridTemplateColumns: `repeat(${race.finish.length}, minmax(0, 1fr))` }} role="img" aria-label={`${name} finishing position chances`}>
         {race.finish.map((p, i) => (
           <div key={i} className="finish-col">
             <span className="small muted">{p > 0 ? `${p}%` : p < 0 ? '<1' : ''}</span>

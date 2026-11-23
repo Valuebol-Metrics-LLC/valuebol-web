@@ -6,15 +6,47 @@ import { clubProfiles } from '../data/clubs.js';
 // Written by scraper/upsl_scraper.py (logos, links, city for every UPSL club). Empty until the scraper runs.
 import upslTeams from '../data/upsl/teams.json';
 
-export const getAsOf = () => snap.asOf;
-export const getCoverage = () => snap.coverage;
-export const getRankings = () => snap.rankings;
-export const getRatingRange = () => snap.ratingRange;
-export const getMovers = () => snap.movers;
-export const getFeaturedMatches = () => snap.featuredMatches;
+// Live numbers: public/upsl/site.json, rebuilt by the daily pipeline run
+// (pipeline/run.py -> pipeline/export_site.py). main.jsx loads it before the first
+// render; anything missing falls back to the Nov 21 snapshot in src/data/snapshot.js.
+let live = null;
+
+export async function loadLiveData({ timeoutMs = 4000 } = {}) {
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    const res = await fetch(`${import.meta.env.BASE_URL}upsl/site.json`, { signal: ctrl.signal, cache: 'no-cache' });
+    clearTimeout(timer);
+    if (res.ok) live = await res.json();
+  } catch {
+    live = null; // offline, blocked or not deployed yet: the snapshot is used
+  }
+  return Boolean(live);
+}
+
+const pick = (key) => {
+  const v = live?.[key];
+  return v == null || (Array.isArray(v) && !v.length) ? snap[key] : v;
+};
+
+// Merge curated stream links (snapshot) into live fixtures for the same clubs and date.
+function withStreams(matches) {
+  return matches.map((m) => {
+    const s = snap.featuredMatches.find((f) => f.home === m.home && f.away === m.away && f.date === m.date);
+    return s ? { ...m, stream: s.stream, streamStatus: s.streamStatus, liveScore: s.liveScore } : m;
+  });
+}
+
+export const isLive = () => Boolean(live);
+export const getAsOf = () => live?.asOf ?? snap.asOf;
+export const getCoverage = () => pick('coverage');
+export const getRankings = () => pick('rankings');
+export const getRatingRange = () => pick('ratingRange');
+export const getMovers = () => pick('movers');
+export const getFeaturedMatches = () => (live?.featuredMatches?.length ? withStreams(live.featuredMatches) : snap.featuredMatches);
 export const getModelValidation = () => snap.modelValidation;
-export const getTopScorers = () => snap.topScorers;
-export const getConferenceRace = () => snap.conferenceRace;
+export const getTopScorers = () => pick('topScorers');
+export const getConferenceRace = () => pick('conferenceRace');
 export const getVideos = () => snap.videos;
 
 export const youtubeThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
@@ -70,9 +102,9 @@ export const logoFor = (name) => profileFor(name).logo ?? null;
 export function getAllClubs() {
   const names = new Map();
   const add = (name, extra = {}) => { if (!names.has(name)) names.set(name, { name, ...extra }); };
-  snap.rankings.forEach((r) => add(r.name, { rank: r.rank, conference: r.conference }));
-  snap.featuredMatches.forEach((m) => { add(m.home, { rank: m.homeRank }); add(m.away, { rank: m.awayRank }); });
-  snap.conferenceRace.clubs.forEach((c) => add(c.name, { conference: snap.conferenceRace.conference }));
+  getRankings().forEach((r) => add(r.name, { rank: r.rank, conference: r.conference }));
+  getFeaturedMatches().forEach((m) => { add(m.home, { rank: m.homeRank }); add(m.away, { rank: m.awayRank }); });
+  getConferenceRace().clubs.forEach((c) => add(c.name, { conference: getConferenceRace().conference }));
   snap.videos.forEach((v) => v.clubs.forEach((c) => add(c)));
   upslTeams.forEach((t) => add(t.name, { conference: t.conference }));
   return [...names.values()].sort((a, b) => (a.rank ?? 9999) - (b.rank ?? 9999) || a.name.localeCompare(b.name));
@@ -81,7 +113,7 @@ export function getAllClubs() {
 export const matchPath = (m) => `/match-${slugify(`${m.home} vs ${m.away} ${m.date}`)}`;
 
 export function getMatchBySlug(slug) {
-  return snap.featuredMatches.find((m) => matchPath(m) === `/match-${slug}`) ?? null;
+  return getFeaturedMatches().find((m) => matchPath(m) === `/match-${slug}`) ?? null;
 }
 
 /** Everything the club page needs, or null if the slug matches no club. */
@@ -89,16 +121,17 @@ export function getClub(slug) {
   const base = getAllClubs().find((c) => slugify(c.name) === slug);
   if (!base) return null;
   const { name } = base;
-  const ranked = snap.rankings.find((r) => r.name === name) ?? null;
-  const race = snap.conferenceRace.clubs.find((c) => c.name === name) ?? null;
+  const ranked = getRankings().find((r) => r.name === name) ?? null;
+  const raceData = getConferenceRace();
+  const race = raceData.clubs.find((c) => c.name === name) ?? null;
   return {
     ...base,
     ...profileFor(name),
     ranked,
-    race: race && { ...race, conference: snap.conferenceRace.conference, runs: snap.conferenceRace.runs },
-    matches: snap.featuredMatches.filter((m) => m.home === name || m.away === name),
+    race: race && { ...race, conference: raceData.conference, runs: raceData.runs },
+    matches: getFeaturedMatches().filter((m) => m.home === name || m.away === name),
     videos: snap.videos.filter((v) => v.clubs.includes(name)),
-    scorers: snap.topScorers.filter((p) => p.club === name),
+    scorers: getTopScorers().filter((p) => p.club === name),
   };
 }
 

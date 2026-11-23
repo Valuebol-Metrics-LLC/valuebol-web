@@ -149,7 +149,7 @@ export default function Home() {
 
         <section className="row">
           <div className="grow">
-            <SectionHead title="Power rankings" sub="Top 5 of 442 active clubs" action={<Link to="/rankings" className="link-arrow">Full rankings →</Link>} />
+            <SectionHead title="Power rankings" sub={`Top 5 of ${cov.activeClubs} active clubs`} action={<Link to="/rankings" className="link-arrow">Full rankings →</Link>} />
             <div className="card">
               {top.map((t, i) => (
                 <Link key={t.name} to={clubPath(t.name)} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none', color: 'var(--text)' }}>
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="side">
             <SectionHead title="Golden boot" sub="Fall 2026" />
             <div className="card">
-              {scorers.map((p, i) => (
+              {scorers.slice(0, 5).map((p, i) => (
                 <div key={p.name} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none' }}>
                   <span className="num muted" style={{ fontSize: 22, width: 18 }}>{i + 1}</span>
                   <span style={{ flex: 1, minWidth: 0 }}>
