@@ -1,5 +1,8 @@
-// Club crest. Shows the club's logo when `logoUrl` is set; otherwise an initials badge
-// in a stable colour per club, so pages look finished before every logo arrives.
+// Club crest. Uses the club's logo (scraped from upsl.com or added by hand) when there is one;
+// otherwise an initials badge in a stable colour per club, so every page looks finished.
+import { useState } from 'react';
+import { logoFor } from '../lib/data.js';
+
 const COLORS = ['#B42318', '#1F6F4A', '#6D28D9', '#C2410C', '#0E7490', '#9D174D', '#3F3F46', '#854D0E', '#155E75', '#7E22CE', '#166534', '#9A3412'];
 const SKIP = new Set(['FC', 'SC', 'SA', 'CF', 'AFC']);
 
@@ -17,8 +20,21 @@ export function crestColor(name) {
 }
 
 export default function Crest({ name, logoUrl, size = 34 }) {
-  if (logoUrl) {
-    return <img src={logoUrl} alt="" width={size} height={size} style={{ borderRadius: '50%', objectFit: 'cover', flex: 'none' }} />;
+  const src = logoUrl ?? logoFor(name);
+  const [failed, setFailed] = useState(false);
+  if (src && !failed) {
+    return (
+      <img
+        className="crest crest-logo"
+        src={src}
+        alt=""
+        width={size}
+        height={size}
+        loading="lazy"
+        onError={() => setFailed(true)}
+        style={{ width: size, height: size, padding: Math.round(size * 0.1) }}
+      />
+    );
   }
   return (
     <span

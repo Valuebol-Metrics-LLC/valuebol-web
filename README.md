@@ -58,3 +58,20 @@ Live data from the pipeline, every conference in Title race, Crowd vs the Model 
 - Club websites, Instagram handles and UPSL pages live in `src/data/clubs.js`. Only add links you've checked; the page asks for missing ones.
 - Each featured match has a preview at `/match-<home>-vs-<away>-<date>` with an add-to-calendar button (1-hour reminder) and share link.
 - Homepage background video: set in `src/config.js` (`heroVideo`). Uses a muted YouTube embed now; put an `.mp4` in `public/` for a faster, cleaner loop.
+
+## UPSL scraper (logos, links, rosters, results)
+
+`scraper/upsl_scraper.py` follows the approach of egudino20/UPSL-Webscraper (club cards on
+premier.upsl.com/teams, then each club page) and adds logos and social links for every club.
+
+```
+pip install -r scraper/requirements.txt
+python scraper/upsl_scraper.py all --limit 20   # try 20 clubs first
+python scraper/upsl_scraper.py all              # every club (~1,000 pages, about 20-30 min)
+python scraper/test_scraper.py                  # offline tests
+```
+
+It writes `public/logos/*.png` and `src/data/upsl/{teams.json,rosters.json,results.csv}`. The site
+picks up logos and links automatically; hand-checked entries in `src/data/clubs.js` win over scraped ones
+(use `upslName` there when our name differs from UPSL's). The GitHub Action in
+`.github/workflows/scrape-upsl.yml` runs it every Monday and on demand from the Actions tab.

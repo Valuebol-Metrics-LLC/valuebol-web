@@ -57,7 +57,7 @@ export default function Club({ slug }) {
   const isFollowed = followed.includes(name);
   const range = getRatingRange();
   const pct = ranked ? Math.round(((ranked.asi - range.lowest) / (range.highest - range.lowest)) * 100) : null;
-  const hasLinks = club.website || club.instagram || club.upsl;
+  const hasLinks = club.website || club.instagram || club.facebook || club.twitter || club.upsl;
 
   return (
     <>
@@ -73,6 +73,8 @@ export default function Club({ slug }) {
               </button>
               {club.website && <a className="btn btn-sm" href={club.website} target="_blank" rel="noreferrer"><GlobeIcon width={16} height={16} /> Website</a>}
               {club.instagram && <a className="btn btn-sm" href={instagramFor(club.instagram)} target="_blank" rel="noreferrer"><InstagramIcon width={16} height={16} /> @{club.instagram}</a>}
+              {club.facebook && <a className="btn btn-sm" href={club.facebook} target="_blank" rel="noreferrer">Facebook</a>}
+              {club.twitter && <a className="btn btn-sm" href={club.twitter} target="_blank" rel="noreferrer">X</a>}
               {club.upsl && <a className="btn btn-sm" href={club.upsl} target="_blank" rel="noreferrer">UPSL page</a>}
               <ShareButton to={clubPath(name)} title={`${name} on Valuebol`} text={ranked ? `${name} are #${ranked.rank} in the UPSL power rankings.` : name} />
             </div>

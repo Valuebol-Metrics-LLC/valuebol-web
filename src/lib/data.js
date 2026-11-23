@@ -3,6 +3,8 @@
 // amateur-football-dashboard project) means changing this file only.
 import * as snap from '../data/snapshot.js';
 import { clubProfiles } from '../data/clubs.js';
+// Written by scraper/upsl_scraper.py (logos, links, city for every UPSL club). Empty until the scraper runs.
+import upslTeams from '../data/upsl/teams.json';
 
 export const getAsOf = () => snap.asOf;
 export const getCoverage = () => snap.coverage;
@@ -50,6 +52,20 @@ export function formatDate(iso) {
 export const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const clubPath = (name) => `/club-${slugify(name)}`;
 
+const upslBySlug = new Map(upslTeams.map((t) => [t.slug, t]));
+const LINK_FIELDS = ['city', 'website', 'instagram', 'facebook', 'twitter', 'youtube', 'upsl', 'logo'];
+
+/** Scraped UPSL info for a club, with hand-checked entries in clubs.js taking priority. */
+export function profileFor(name) {
+  const manual = clubProfiles[name] ?? {};
+  const scraped = upslBySlug.get(slugify(manual.upslName ?? name)) ?? {};
+  const merged = {};
+  LINK_FIELDS.forEach((k) => { if (scraped[k]) merged[k] = scraped[k]; });
+  return { ...merged, ...manual };
+}
+
+export const logoFor = (name) => profileFor(name).logo ?? null;
+
 /** Every club the site knows about (ranked, in a fixture, in the title race or in a video). */
 export function getAllClubs() {
   const names = new Map();
@@ -58,6 +74,7 @@ export function getAllClubs() {
   snap.featuredMatches.forEach((m) => { add(m.home, { rank: m.homeRank }); add(m.away, { rank: m.awayRank }); });
   snap.conferenceRace.clubs.forEach((c) => add(c.name, { conference: snap.conferenceRace.conference }));
   snap.videos.forEach((v) => v.clubs.forEach((c) => add(c)));
+  upslTeams.forEach((t) => add(t.name, { conference: t.conference }));
   return [...names.values()].sort((a, b) => (a.rank ?? 9999) - (b.rank ?? 9999) || a.name.localeCompare(b.name));
 }
 
@@ -76,7 +93,7 @@ export function getClub(slug) {
   const race = snap.conferenceRace.clubs.find((c) => c.name === name) ?? null;
   return {
     ...base,
-    ...(clubProfiles[name] ?? {}),
+    ...profileFor(name),
     ranked,
     race: race && { ...race, conference: snap.conferenceRace.conference, runs: snap.conferenceRace.runs },
     matches: snap.featuredMatches.filter((m) => m.home === name || m.away === name),
