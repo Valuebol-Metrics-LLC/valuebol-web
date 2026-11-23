@@ -17,8 +17,8 @@ const NAV = [
 function Logo({ height = 30 }) {
   return (
     <>
-      <img className="logo-light" src="/logo.png" alt="" style={{ height, width: 'auto', display: 'block' }} />
-      <img className="logo-dark" src="/logo-dark.png" alt="" style={{ height, width: 'auto' }} />
+      <img className="logo-light" src="logo.png" alt="" style={{ height, width: 'auto', display: 'block' }} />
+      <img className="logo-dark" src="logo-dark.png" alt="" style={{ height, width: 'auto' }} />
     </>
   );
 }
@@ -67,11 +67,13 @@ export function Footer() {
             <span>{site.name}</span>
           </span>
           <span>Data sourced from <a href="https://upsl.com">upsl.com</a></span>
+          <span>© 2026 {site.name}. All rights reserved.</span>
         </div>
         <nav aria-label="Footer" style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 20px' }}>
           <Link to="/about">About us</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/methodology">How the numbers work</Link>
+          <Link to="/legal">Copyright &amp; terms</Link>
           <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram @{site.instagramHandle}</a>
         </nav>
       </div>

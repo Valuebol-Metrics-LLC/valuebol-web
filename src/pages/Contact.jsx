@@ -67,7 +67,7 @@ export default function Contact() {
             <textarea className="input" value={message} onChange={(e) => setMessage(e.target.value)} placeholder={topic === 'Fix a stat or result' ? 'Which match, and what should it say?' : 'How can we help?'} />
           </label>
           {error && <p role="alert" className="down" style={{ margin: 0 }}>{error}</p>}
-          {sent && !error && <p role="status" className="up" style={{ margin: 0 }}>Your email app should open with the message ready. Hit send there and we'll get back to you.</p>}
+          {sent && !error && <p role="status" className="up" style={{ margin: 0 }}>Your email app should open with the message ready to send. If it didn't, email us at {site.contactEmail}.</p>}
           <div><button type="submit" className="btn btn-primary"><MailIcon /> Send message</button></div>
         </form>
 

@@ -8,6 +8,7 @@ import Matches from './pages/Matches.jsx';
 import TitleRace from './pages/TitleRace.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import Legal from './pages/Legal.jsx';
 
 const ROUTES = {
   '/': Home,
@@ -18,6 +19,7 @@ const ROUTES = {
   '/title-race': TitleRace,
   '/about': About,
   '/contact': Contact,
+  '/legal': Legal,
 };
 
 function NotFound() {

@@ -26,6 +26,7 @@ Built with React + Vite, no other runtime dependencies. Deploys to Vercel as-is 
 | `/about` | About us: mission, coverage, who it's for, what's next, Instagram |
 | `/contact` | Contact form (opens the visitor's email app, addressed to the team), Instagram DM, email |
 | `/methodology` | How the numbers work: each model in one sentence, full method underneath, validation table |
+| `/legal` | Copyright & terms: ownership, sharing with credit, data sources and club marks, corrections |
 
 ## Before launch
 
