@@ -42,4 +42,6 @@ jobs:
           git add public/logos src/data/upsl
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "UPSL data update $(date -u +%Y-%m-%d)"
+          # main may have moved while the scrape ran; put this commit on top
+          git pull --rebase -X theirs origin main
           git push

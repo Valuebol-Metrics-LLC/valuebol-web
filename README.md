@@ -35,7 +35,8 @@ Each match in the data can carry `stream` (YouTube link), `streamStatus` (`live`
 
 ## Before launch
 
-Set the real Instagram handle in `src/config.js` (still a placeholder). The contact email is set.
+1. **Live numbers.** Rankings and predictions still come from the Nov 21 snapshot. Point `src/lib/data.js` at the real pipeline (see below).
+2. **The domain.** The new site runs at valuebol-metrics-llc.github.io/valuebol-web. Moving valuebol-metrics.com onto it replaces the current site, so only do it once the numbers are live. Either add the domain in Vercel (import this repo) or in GitHub Pages settings, then update the DNS records where the domain is registered.
 
 ## Where the data comes from
 
