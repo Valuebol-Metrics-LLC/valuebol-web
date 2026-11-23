@@ -35,7 +35,8 @@ Each match in the data can carry `stream` (YouTube link), `streamStatus` (`live`
 
 ## Before launch
 
-Set the real Instagram handle in `src/config.js` (still a placeholder). The contact email is set.
+1. **Live numbers.** Rankings and predictions still come from the Nov 21 snapshot. Point `src/lib/data.js` at the real pipeline (see below).
+2. **The domain.** The new site runs at valuebol-metrics-llc.github.io/valuebol-web. Moving valuebol-metrics.com onto it replaces the current site, so only do it once the numbers are live. Either add the domain in Vercel (import this repo) or in GitHub Pages settings, then update the DNS records where the domain is registered.
 
 ## Where the data comes from
 
@@ -75,3 +76,19 @@ It writes `public/logos/*.png` and `src/data/upsl/{teams.json,rosters.json,resul
 picks up logos and links automatically; hand-checked entries in `src/data/clubs.js` win over scraped ones
 (use `upslName` there when our name differs from UPSL's). The GitHub Action in
 `.github/workflows/scrape-upsl.yml` runs it every Monday and on demand from the Actions tab.
+
+## UPSL data pipeline (rankings, predictions, history)
+
+`pipeline/upsl/` is copied unchanged from egudino20/amateur-football-dashboard. It scrapes every
+Premier season's schedule, results and standings, current rosters and goal scorers, then computes
+the ASI (Elo), Dixon-Coles match predictions and 10,000-run projected standings. `pipeline/run.py`
+runs the steps in his documented order and writes `public/upsl/*.json` for the site.
+
+```
+pip install -r pipeline/requirements.txt
+python pipeline/run.py full      # every season (first run; a few hours with goal scorers)
+python pipeline/run.py update    # newest seasons only, then rebuild all models
+```
+
+`.github/workflows/pipeline.yml` runs `update` every day and keeps the scraped history in the
+Actions cache, so old pages are never downloaded twice. Run it once with mode `full` first.
