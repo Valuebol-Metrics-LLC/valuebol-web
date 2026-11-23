@@ -14,14 +14,22 @@ npm run build    # production build in dist/
 
 Built with React + Vite, no other runtime dependencies. Deploys to Vercel as-is (`vercel.json` sends every route to `index.html`).
 
-## Pages (v0.1)
+## Pages
 
 | Route | Page |
 | --- | --- |
-| `/` | Home: this week's big matches with plain-English odds, top 5, Golden Boot, model accuracy |
+| `/` | Home: this week's big matches with plain-English odds, top 5, Golden Boot, model accuracy, Instagram |
+| `/matches` | Beat the model: pick home / draw / away, see if you agree with the model (picks saved in the browser) |
 | `/rankings` | Power rankings: ASI explainer, movers, searchable table, follow clubs (saved in the browser) |
 | `/who-wins` | Pick any two clubs: "X come out on top in about 7 of 10 meetings", upset stakes, Show the math |
+| `/title-race` | Can we still win it? Florida West simulations: chances by club, what-if points calculator |
+| `/about` | About us: mission, coverage, who it's for, what's next, Instagram |
+| `/contact` | Contact form (opens the visitor's email app, addressed to the team), Instagram DM, email |
 | `/methodology` | How the numbers work: each model in one sentence, full method underneath, validation table |
+
+## Before launch
+
+Set the real Instagram handle and contact email in `src/config.js` (both are placeholders now).
 
 ## Where the data comes from
 
@@ -29,10 +37,11 @@ All pages read through `src/lib/data.js`. Right now it returns a **snapshot** of
 
 ## Design
 
-- Light green theme with the Valuebol LLC logo (option 04). Colours and type live in `src/styles.css` as CSS variables.
+- Light and dark mode, switched from the header and remembered per visitor (defaults to the device setting). Both themes live in `src/styles.css` as CSS variables.
+- Valuebol LLC logo (option 04), with a white-B version for dark mode.
 - Club crests: `src/components/Crest.jsx` shows a club's real logo when a `logoUrl` is provided, otherwise an initials badge.
 - Fonts: Barlow Condensed (numbers, headings) and Inter (text), from Google Fonts.
 
 ## Next up
 
-Can we still win it? (conference simulations), Matches with Beat the Model picks, Crowd vs the Model voting, player profiles with Instagram share cards, and the community scouts program.
+Live data from the pipeline, every conference in Title race, Crowd vs the Model voting, player profiles with Instagram share cards, and the community scouts program.

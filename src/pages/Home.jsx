@@ -1,5 +1,5 @@
 import { Link } from '../lib/router.jsx';
-import { SectionHead } from '../components/Layout.jsx';
+import { SectionHead, InstagramBand } from '../components/Layout.jsx';
 import Crest from '../components/Crest.jsx';
 import { getCoverage, getFeaturedMatches, getModelValidation, getRankings, getTopScorers, describeOdds, formatDate } from '../lib/data.js';
 
@@ -71,7 +71,7 @@ export default function Home() {
 
       <div className="container page">
         <section>
-          <SectionHead kicker="01" title="This week's big matches" action={<Link to="/who-wins" className="link-arrow">Compare any two clubs →</Link>} />
+          <SectionHead kicker="01" title="This week's big matches" action={<Link to="/matches" className="link-arrow">Make your picks →</Link>} />
           <div className="grid grid-auto">
             {matches.map((m) => <MatchCard key={m.date + m.home} m={m} />)}
           </div>
@@ -113,7 +113,7 @@ export default function Home() {
 
         <section className="panel-accent" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 32 }}>
           <div style={{ flex: '1 1 320px' }}>
-            <p className="eyebrow" style={{ color: '#d7ebdb' }}>04 · Can you trust the model?</p>
+            <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>04 · Can you trust the model?</p>
             <h2 className="display display-lg" style={{ marginTop: 8 }}>It calls {model.accuracy}% of results</h2>
             <p className="muted" style={{ margin: '10px 0 0' }}>Tested on {model.matchesTested.toLocaleString('en-US')} Spring 2026 league matches it had never seen. Guessing from league averages gets {model.baseline}%.</p>
           </div>
@@ -121,8 +121,10 @@ export default function Home() {
             <div><div className="num" style={{ fontSize: 'clamp(44px, 12vw, 64px)' }}>{model.accuracy}%</div><div className="small">Valuebol model</div></div>
             <div><div className="num" style={{ fontSize: 'clamp(44px, 12vw, 64px)', opacity: 0.7 }}>{model.baseline}%</div><div className="small">Baseline</div></div>
           </div>
-          <Link to="/methodology" className="btn" style={{ background: 'transparent', color: '#fff', borderColor: '#d7ebdb' }}>How it works</Link>
+          <Link to="/methodology" className="btn" style={{ background: 'transparent', color: '#fff', borderColor: 'var(--on-accent-2)' }}>How it works</Link>
         </section>
+
+        <InstagramBand />
       </div>
     </>
   );

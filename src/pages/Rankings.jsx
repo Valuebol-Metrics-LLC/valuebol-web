@@ -82,7 +82,7 @@ export default function Rankings() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'flex-end' }}>
           <label style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: '1 1 260px' }}>
             <span className="stat-label">Find a club or conference</span>
-            <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Type a name" style={{ height: 44, border: '1px solid var(--border-strong)', borderRadius: 8, padding: '0 12px', font: 'inherit', background: 'var(--surface)' }} />
+            <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Type a name" style={{ height: 44, border: '1px solid var(--border-strong)', borderRadius: 8, padding: '0 12px', font: 'inherit', background: 'var(--surface)', color: 'var(--text)' }} />
           </label>
           <button type="button" className={`btn ${onlyMine ? 'btn-primary' : ''}`} aria-pressed={onlyMine} onClick={() => setOnlyMine(!onlyMine)}>
             ★ My clubs ({followed.length})
@@ -108,7 +108,7 @@ export default function Rankings() {
                 return (
                   <tr key={t.name}>
                     <td style={{ width: 52 }}>
-                      <button type="button" aria-pressed={on} aria-label={`Follow ${t.name}`} onClick={() => toggle(t.name)} style={{ width: 44, height: 44, border: 0, background: 'transparent', fontSize: 20, color: on ? 'var(--accent)' : 'var(--text-3)' }}>
+                      <button type="button" aria-pressed={on} aria-label={`Follow ${t.name}`} onClick={() => toggle(t.name)} style={{ width: 44, height: 44, border: 0, background: 'transparent', fontSize: 20, color: on ? 'var(--accent-text)' : 'var(--text-3)' }}>
                         {on ? '★' : '☆'}
                       </button>
                     </td>

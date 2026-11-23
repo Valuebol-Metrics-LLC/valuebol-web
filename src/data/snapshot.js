@@ -78,3 +78,26 @@ export const topScorers = [
   { name: 'Sebastian Ruiz Restrepo', club: 'NY Renegades FC', goals: 8 },
   { name: 'Mauricio J Puerto', club: 'NY Renegades FC', goals: 7 },
 ];
+
+// Florida West, Fall 2026: projected table from 10,000 simulated seasons.
+// pts/gp = official table now; projGp = games after the remaining fixtures; finish = % of runs in each place (1st..13th), -1 = under 1%.
+export const conferenceRace = {
+  conference: 'Florida West',
+  season: 'Fall 2026',
+  runs: 10000,
+  clubs: [
+    { name: 'Lakeland United', pos: 1, pts: 34, gp: 12, projGp: 12, projPts: 34.0, finish: [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+    { name: 'PCU Pelicans SC', pos: 2, pts: 27, gp: 10, projGp: 12, projPts: 30.9, finish: [0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+    { name: 'Inter City FC', pos: 3, pts: 19, gp: 9, projGp: 11, projPts: 22.7, finish: [0, 0, 96, 4, -1, 0, 0, 0, 0, 0, 0, 0, 0] },
+    { name: 'Sarasota Paradise', pos: 5, pts: 16, gp: 10, projGp: 12, projPts: 19.2, finish: [0, 0, 4, 65, 18, 4, 6, 4, 0, 0, 0, 0, 0] },
+    { name: 'West Florida Flames', pos: 4, pts: 17, gp: 11, projGp: 12, projPts: 17.5, finish: [0, 0, -1, 10, 36, 51, 2, 0, 0, 0, 0, 0, 0] },
+    { name: 'Shock City FC', pos: 6, pts: 16, gp: 11, projGp: 12, projPts: 17.3, finish: [0, 0, 0, 12, 37, 11, 15, 25, 0, 0, 0, 0, 0] },
+    { name: 'Benfica Residential Academy', pos: 7, pts: 16, gp: 12, projGp: 12, projPts: 16.0, finish: [0, 0, 0, 0, 1, 30, 65, 4, 0, 0, 0, 0, 0] },
+    { name: 'FC Tampa Rangers', pos: 8, pts: 15, gp: 12, projGp: 12, projPts: 15.0, finish: [0, 0, 0, 0, 0, 0, 0, 56, 44, -1, 0, 0, 0] },
+    { name: 'Florida Premier FC', pos: 9, pts: 10, gp: 9, projGp: 12, projPts: 14.4, finish: [0, 0, 0, 9, 8, 4, 12, 12, 45, 11, 1, 0, 0] },
+    { name: 'Clearwater Chargers SC', pos: 10, pts: 9, gp: 10, projGp: 12, projPts: 11.2, finish: [0, 0, 0, 0, 0, 0, 0, -1, 10, 64, 18, 8, -1] },
+    { name: 'Cape Coral City FC', pos: 11, pts: 7, gp: 11, projGp: 12, projPts: 8.5, finish: [0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 44, 35, 12] },
+    { name: 'Florida Celtic SC', pos: 12, pts: 4, gp: 9, projGp: 12, projPts: 7.3, finish: [0, 0, 0, 0, 0, 0, 0, 0, 1, 10, 18, 24, 48] },
+    { name: 'SWFL SC', pos: 13, pts: 3, gp: 8, projGp: 11, projPts: 6.9, finish: [0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 19, 33, 40] },
+  ],
+};

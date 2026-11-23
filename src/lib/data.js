@@ -11,6 +11,7 @@ export const getMovers = () => snap.movers;
 export const getFeaturedMatches = () => snap.featuredMatches;
 export const getModelValidation = () => snap.modelValidation;
 export const getTopScorers = () => snap.topScorers;
+export const getConferenceRace = () => snap.conferenceRace;
 
 /** ASI is Elo-based: expected score of A against B (a draw counts as half a win). */
 export function eloExpected(ratingA, ratingB) {

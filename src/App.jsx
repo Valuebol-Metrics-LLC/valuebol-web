@@ -4,12 +4,20 @@ import Home from './pages/Home.jsx';
 import Rankings from './pages/Rankings.jsx';
 import WhoWins from './pages/WhoWins.jsx';
 import Methodology from './pages/Methodology.jsx';
+import Matches from './pages/Matches.jsx';
+import TitleRace from './pages/TitleRace.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 
 const ROUTES = {
   '/': Home,
   '/rankings': Rankings,
   '/who-wins': WhoWins,
   '/methodology': Methodology,
+  '/matches': Matches,
+  '/title-race': TitleRace,
+  '/about': About,
+  '/contact': Contact,
 };
 
 function NotFound() {
