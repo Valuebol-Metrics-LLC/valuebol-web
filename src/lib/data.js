@@ -12,6 +12,10 @@ export const getFeaturedMatches = () => snap.featuredMatches;
 export const getModelValidation = () => snap.modelValidation;
 export const getTopScorers = () => snap.topScorers;
 export const getConferenceRace = () => snap.conferenceRace;
+export const getVideos = () => snap.videos;
+
+export const youtubeThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+export const youtubeUrl = (id) => `https://www.youtube.com/watch?v=${id}`;
 
 /** ASI is Elo-based: expected score of A against B (a draw counts as half a win). */
 export function eloExpected(ratingA, ratingB) {

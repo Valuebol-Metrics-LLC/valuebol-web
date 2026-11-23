@@ -49,7 +49,14 @@ export const movers = {
 };
 
 // Featured upcoming matches with Valuebol's home / draw / away probabilities (null = not enough history).
+// stream: YouTube link for the match (live or replay), from upsl.com or the clubs' channels.
+// streamStatus: 'live' | 'replay' | 'scheduled'. liveScore is filled by the live-score job when a
+// stream's scoreboard can be read, e.g. { home: 1, away: 0, minute: 63 }.
 export const featuredMatches = [
+  { date: '2026-11-22', time: 'Live now', competition: 'UPSL Florida South - South', home: 'Miami United FC', homeRank: 5, away: 'Miami FC U20', awayRank: 167, probs: null,
+    stream: 'https://www.youtube.com/watch?v=xNLrwdD1tLw', streamStatus: 'live', liveScore: null },
+  { date: '2026-11-22', time: '7:00 PM', competition: 'UPSL Georgia West', home: 'Georgia Revolution FC', homeRank: 26, away: 'Potros FC', awayRank: 51, probs: [45, 16, 39],
+    stream: 'https://www.youtube.com/watch?v=D1CWnEtSxY4', streamStatus: 'replay', liveScore: null },
   { date: '2026-11-27', time: '8:00 PM', competition: 'UPSL Florida West', home: 'PCU Pelicans SC', homeRank: 12, away: 'West Florida Flames', awayRank: 81, probs: [72, 16, 12] },
   { date: '2026-11-28', time: '4:00 PM', competition: 'UPSL National Round of 16', home: 'DC Hyper', homeRank: 29, away: 'Cosmos B', awayRank: 72, probs: [65, 23, 12] },
   { date: '2026-11-29', time: '4:00 PM', competition: 'UPSL National Round of 16', home: 'NY Renegades FC', homeRank: 1, away: 'Boston Emeralds FC', awayRank: 41, probs: null },
@@ -101,3 +108,17 @@ export const conferenceRace = {
     { name: 'SWFL SC', pos: 13, pts: 3, gp: 8, projGp: 11, projPts: 6.9, finish: [0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 19, 33, 40] },
   ],
 };
+
+// UPSL game videos on YouTube (as of Nov 22, 2026). kind: 'highlights' | 'full' | 'live'.
+export const videos = [
+  { id: 'jkA4f8Gpgv0', kind: 'highlights', featured: true, title: 'The night history was made: Deportivo Rose City vs Miami United FC, 2026 UPSL National Final', channel: 'United Premier Soccer League UPSL', when: '3 months ago', clubs: ['Deportivo Rose City', 'Miami United FC'] },
+  { id: 'xNLrwdD1tLw', kind: 'live', title: 'Miami United FC vs Miami FC U20, UPSL Fall 2026', channel: 'Miami United FC', when: 'Live now', clubs: ['Miami United FC', 'Miami FC U20'] },
+  { id: 'D1CWnEtSxY4', kind: 'full', title: 'Georgia Revolution FC vs Potros FC, UPSL Premier Fall 2026', channel: 'Potros FC - UPSL', when: 'Today', clubs: ['Georgia Revolution FC', 'Potros FC'] },
+  { id: '6lRsQ2W2ooM', kind: 'highlights', title: 'UFA Lawrenceville vs Kalonji Pro Profile, UPSL GA East Premier', channel: 'Atlantic Soccer Media Group', when: '3 weeks ago', clubs: ['UFA Lawrenceville', 'Kalonji Pro-Profile'] },
+  { id: 'UDJerOQpDKw', kind: 'full', title: 'TBD FC Internationals vs Berber City FC, UPSL Premier', channel: 'Midwest Media Network', when: '4 weeks ago', clubs: ['TBD FC', 'Berber City FC'] },
+  { id: 'qxP650ksuXY', kind: 'highlights', title: 'Atlanta United Academy vs UMA FC, UPSL Georgia Premier Division', channel: 'Atlantic Soccer Media Group', when: '1 month ago', clubs: ['Atlanta United Academy', 'UMA FC'] },
+  { id: 'WbGMjOsnSLk', kind: 'highlights', title: 'Deportivo Rose City vs Forest Grove SC, UPSL Premier', channel: 'Atlantic Soccer Media Group', when: '1 month ago', clubs: ['Deportivo Rose City', 'Forest Grove Soccer Club'] },
+  { id: 'Nyl4RscOKl0', kind: 'highlights', title: 'UFA Lawrenceville vs Pachuca GA, UPSL Georgia Premier Division', channel: 'Atlantic Soccer Media Group', when: '1 month ago', clubs: ['UFA Lawrenceville', 'Pachuca Georgia'] },
+  { id: 'fRnmXa6UGao', kind: 'highlights', title: 'LA Dynamo 2-0 Rose City FC, UPSL Playoffs', channel: 'LA Dynamo', when: '11 months ago', clubs: ['Los Angeles Dynamo', 'Rose City FC'] },
+  { id: 'srkMsjMqJsQ', kind: 'highlights', title: 'Columbus Crew Academy vs Chicago Nation FC, UPSL National Round of 16', channel: 'United Premier Soccer League UPSL', when: '2 years ago', clubs: ['Columbus Crew Academy', 'Chicago Nation FC'] },
+];

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Crest from '../components/Crest.jsx';
+import { MatchStream } from '../components/Video.jsx';
 import ShowTheMath from '../components/ShowTheMath.jsx';
 import { Link } from '../lib/router.jsx';
 import { getFeaturedMatches, getModelValidation, describeOdds, formatDate } from '../lib/data.js';
@@ -12,12 +13,13 @@ const modelPick = (p) => (p[0] >= p[1] && p[0] >= p[2] ? 0 : p[2] >= p[1] ? 2 : 
 function MatchPick({ m, pick, onPick }) {
   const short = (n) => n.replace(/ (FC|SC)$/, '');
   const options = [short(m.home), 'Draw', short(m.away)];
+  const closed = m.streamStatus === 'live' || m.streamStatus === 'replay';
   const mp = m.probs ? modelPick(m.probs) : null;
   let note = '';
   if (m.probs) {
-    if (pick == null) note = `Model leans ${LABEL[mp]}. Your call?`;
-    else if (pick === mp) note = `You agree with the model: ${LABEL[mp]}.`;
-    else note = `Bold. You're going against the model, which says ${LABEL[mp]}.`;
+    if (pick == null) note = `Model pick: ${LABEL[mp]}.`;
+    else if (pick === mp) note = `Same as the model: ${LABEL[mp]}.`;
+    else note = `Against the model. It has ${LABEL[mp]}.`;
   }
   return (
     <article className="card card-pad" style={{ display: 'flex', flexDirection: 'column', gap: 16, borderColor: pick != null ? 'var(--accent)' : undefined }}>
@@ -36,7 +38,9 @@ function MatchPick({ m, pick, onPick }) {
           <b>{m.away}</b><span className="muted small">ASI #{m.awayRank}</span>
         </div>
       </div>
-      {m.probs ? (
+      {closed ? (
+        <p className="muted small" style={{ margin: 0 }}>{m.streamStatus === 'live' ? 'Picks are closed. This game is on now.' : 'Picks are closed for this game.'}</p>
+      ) : m.probs ? (
         <>
           <div role="group" aria-label="Your pick" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 8 }}>
             {options.map((label, i) => {
@@ -53,8 +57,9 @@ function MatchPick({ m, pick, onPick }) {
           <p className={pick != null && pick !== mp ? 'down small' : 'muted small'} style={{ margin: 0 }}>{describeOdds(m.probs)}. {note}</p>
         </>
       ) : (
-        <p className="muted small" style={{ margin: 0, padding: 14, background: 'var(--surface-2)', borderRadius: 10, textAlign: 'center' }}>No prediction: one club doesn't have enough match history yet.</p>
+        <p className="muted small" style={{ margin: 0, padding: 14, background: 'var(--surface-2)', borderRadius: 10, textAlign: 'center' }}>No prediction yet. One of these clubs hasn't played enough games.</p>
       )}
+      <MatchStream m={m} />
     </article>
   );
 }
@@ -75,7 +80,7 @@ export default function Matches() {
     try { localStorage.setItem(PICKS_KEY, JSON.stringify(next)); } catch { /* ignore */ }
   };
 
-  const pickable = matches.filter((m) => m.probs);
+  const pickable = matches.filter((m) => m.probs && !m.streamStatus);
   const made = pickable.filter((m) => picks[keyOf(m)] != null);
   const agree = made.filter((m) => picks[keyOf(m)] === modelPick(m.probs)).length;
 
@@ -84,10 +89,10 @@ export default function Matches() {
       <section className="panel-accent" style={{ borderRadius: 0, padding: 0 }}>
         <div className="container" style={{ padding: '44px 24px', display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ flex: '1 1 480px' }}>
-            <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>Weekly picks game</p>
+            <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>Weekly picks</p>
             <h1 className="display display-xl" style={{ marginTop: 6 }}>Beat the model</h1>
             <p style={{ margin: '12px 0 0', fontSize: 17, color: 'var(--on-accent-2)', maxWidth: 560 }}>
-              Our model called {model.accuracy}% of results it had never seen. Pick home, draw or away for this week's big matches and see if you know the league better.
+              Pick a result for each of this week's big games and see how you do against our model. It gets {model.accuracy}% right.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 28, background: 'rgba(0,0,0,0.18)', borderRadius: 12, padding: '18px 26px' }} aria-live="polite">

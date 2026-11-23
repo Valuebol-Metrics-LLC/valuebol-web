@@ -56,7 +56,7 @@ function MethodSection({ s }) {
       <p style={{ margin: 0, fontSize: 17 }}>{s.plain}</p>
       <div>
         <button type="button" className="btn" aria-expanded={open} onClick={() => setOpen(!open)}>
-          {open ? 'Hide the full method' : 'Show the full method'}
+          {open ? 'Hide full method' : 'Full method'}
         </button>
       </div>
       {open && (
@@ -75,7 +75,7 @@ export default function Methodology() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <p className="eyebrow">Data &amp; models</p>
         <h1 className="display display-xl">How the numbers work</h1>
-        <p className="lead">Three systems power Valuebol. Each one in a sentence, with the full method one tap away.</p>
+        <p className="lead">Valuebol runs on three models. Here's what each one does, with the full method underneath.</p>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -83,7 +83,7 @@ export default function Methodology() {
       </div>
 
       <section style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        <h2 className="display display-lg">Is it any good?</h2>
+        <h2 className="display display-lg">How accurate is it?</h2>
         <p style={{ margin: 0, fontSize: 17 }}>
           On {v.matchesTested.toLocaleString('en-US')} Spring 2026 league matches the model never saw, it called the right result <b>{v.accuracy}%</b> of the time. Guessing from league-average home / draw / away rates gets {v.baseline}%.
         </p>

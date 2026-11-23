@@ -1,7 +1,8 @@
 import { Link } from '../lib/router.jsx';
 import { SectionHead, InstagramBand } from '../components/Layout.jsx';
 import Crest from '../components/Crest.jsx';
-import { getCoverage, getFeaturedMatches, getModelValidation, getRankings, getTopScorers, describeOdds, formatDate } from '../lib/data.js';
+import VideoCard, { MatchStream } from '../components/Video.jsx';
+import { getVideos, getCoverage, getFeaturedMatches, getModelValidation, getRankings, getTopScorers, describeOdds, formatDate } from '../lib/data.js';
 
 function MatchCard({ m }) {
   return (
@@ -32,8 +33,9 @@ function MatchCard({ m }) {
           </p>
         </div>
       ) : (
-        <p className="muted small" style={{ margin: 0 }}>No prediction yet: one club needs more match history.</p>
+        <p className="muted small" style={{ margin: 0 }}>No prediction yet. One of these clubs hasn't played enough games.</p>
       )}
+      <MatchStream m={m} />
     </article>
   );
 }
@@ -41,7 +43,8 @@ function MatchCard({ m }) {
 export default function Home() {
   const cov = getCoverage();
   const top = getRankings().slice(0, 5);
-  const matches = getFeaturedMatches();
+  const matches = getFeaturedMatches().slice(0, 4);
+  const videos = getVideos().filter((v) => !v.featured).slice(0, 3);
   const model = getModelValidation();
   const scorers = getTopScorers();
 
@@ -54,9 +57,9 @@ export default function Home() {
             <h1 className="display display-xl">
               Bridging the gap between amateur and <span className="accent">professional</span> football.
             </h1>
-            <p className="lead">Rankings, predictions and player stats for every UPSL club, in plain English, with the math one tap away.</p>
+            <p className="lead">Rankings, match predictions and stats for every club in the UPSL.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-              <Link to="/who-wins" className="btn btn-primary">Who wins? Try it</Link>
+              <Link to="/who-wins" className="btn btn-primary">Compare two clubs</Link>
               <Link to="/rankings" className="btn">See the rankings</Link>
             </div>
           </div>
@@ -71,7 +74,7 @@ export default function Home() {
 
       <div className="container page">
         <section>
-          <SectionHead kicker="01" title="This week's big matches" action={<Link to="/matches" className="link-arrow">Make your picks →</Link>} />
+          <SectionHead title="This week's big matches" action={<Link to="/matches" className="link-arrow">Make your picks →</Link>} />
           <div className="grid grid-auto">
             {matches.map((m) => <MatchCard key={m.date + m.home} m={m} />)}
           </div>
@@ -79,7 +82,7 @@ export default function Home() {
 
         <section className="row">
           <div className="grow">
-            <SectionHead kicker="02" title="Power rankings" sub="Top 5 of 442 active clubs" action={<Link to="/rankings" className="link-arrow">Full rankings →</Link>} />
+            <SectionHead title="Power rankings" sub="Top 5 of 442 active clubs" action={<Link to="/rankings" className="link-arrow">Full rankings →</Link>} />
             <div className="card">
               {top.map((t, i) => (
                 <Link key={t.name} to="/rankings" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none', color: 'var(--text)' }}>
@@ -95,7 +98,7 @@ export default function Home() {
             </div>
           </div>
           <div className="side">
-            <SectionHead kicker="03" title="Golden boot" sub="Fall 2026" />
+            <SectionHead title="Golden boot" sub="Fall 2026" />
             <div className="card">
               {scorers.map((p, i) => (
                 <div key={p.name} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none' }}>
@@ -113,15 +116,22 @@ export default function Home() {
 
         <section className="panel-accent" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 32 }}>
           <div style={{ flex: '1 1 320px' }}>
-            <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>04 · Can you trust the model?</p>
-            <h2 className="display display-lg" style={{ marginTop: 8 }}>It calls {model.accuracy}% of results</h2>
-            <p className="muted" style={{ margin: '10px 0 0' }}>Tested on {model.matchesTested.toLocaleString('en-US')} Spring 2026 league matches it had never seen. Guessing from league averages gets {model.baseline}%.</p>
+            <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>Model accuracy</p>
+            <h2 className="display display-lg" style={{ marginTop: 8 }}>We pick the right result {model.accuracy}% of the time</h2>
+            <p className="muted" style={{ margin: '10px 0 0' }}>Checked on {model.matchesTested.toLocaleString('en-US')} Spring 2026 league games the model hadn't seen. Going by league averages alone gets {model.baseline}%.</p>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 28 }}>
             <div><div className="num" style={{ fontSize: 'clamp(44px, 12vw, 64px)' }}>{model.accuracy}%</div><div className="small">Valuebol model</div></div>
             <div><div className="num" style={{ fontSize: 'clamp(44px, 12vw, 64px)', opacity: 0.7 }}>{model.baseline}%</div><div className="small">Baseline</div></div>
           </div>
           <Link to="/methodology" className="btn" style={{ background: 'transparent', color: '#fff', borderColor: 'var(--on-accent-2)' }}>How it works</Link>
+        </section>
+
+        <section>
+          <SectionHead title="Latest videos" action={<Link to="/videos" className="link-arrow">All videos →</Link>} />
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24 }}>
+            {videos.map((v) => <VideoCard key={v.id} v={v} />)}
+          </div>
         </section>
 
         <InstagramBand />

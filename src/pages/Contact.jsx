@@ -39,7 +39,7 @@ export default function Contact() {
       <section style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <p className="eyebrow">Contact us</p>
         <h1 className="display display-xl">Talk to Valuebol</h1>
-        <p className="lead">Spotted a wrong result? Want your club's badge? Interested in sponsoring? We read everything.</p>
+        <p className="lead">Questions, corrections, sponsorships or badge requests. Send us a message.</p>
       </section>
 
       <section className="row" style={{ alignItems: 'stretch' }}>
@@ -76,7 +76,7 @@ export default function Contact() {
             <span className="icon-btn" style={{ background: 'var(--accent)', color: 'var(--on-accent)', borderColor: 'var(--accent)' }}><InstagramIcon /></span>
             <span>
               <span style={{ display: 'block', fontWeight: 700 }}>DM us on Instagram</span>
-              <span className="muted small">@{site.instagramHandle} · fastest reply</span>
+              <span className="muted small">@{site.instagramHandle}</span>
             </span>
           </a>
           <a className="card card-pad" href={`mailto:${site.contactEmail}`} style={{ display: 'flex', gap: 14, alignItems: 'center', color: 'var(--text)' }}>

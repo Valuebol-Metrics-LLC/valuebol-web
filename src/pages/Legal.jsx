@@ -12,7 +12,7 @@ const SECTIONS = [
     ],
   },
   {
-    title: 'Sharing is welcome',
+    title: 'Sharing',
     body: [
       'Players, clubs and fans may share Valuebol pages, rankings, stat cards and ranking badges on social media and club websites, as long as the content is not changed and Valuebol is credited (for example "via Valuebol" or a tag of our Instagram account).',
     ],
@@ -45,7 +45,7 @@ export default function Legal() {
       <section style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <p className="eyebrow">Legal</p>
         <h1 className="display display-xl">Copyright &amp; terms</h1>
-        <p className="lead">The short version: our work is ours, your club's crest is yours, and sharing with credit is welcome.</p>
+        <p className="lead">What you can and can't do with the content on this site.</p>
       </section>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         {SECTIONS.map((s) => (

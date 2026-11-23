@@ -19,6 +19,7 @@ Built with React + Vite, no other runtime dependencies. Deploys to Vercel as-is 
 | Route | Page |
 | --- | --- |
 | `/` | Home: this week's big matches with plain-English odds, top 5, Golden Boot, model accuracy, Instagram |
+| `/videos` | UPSL videos from YouTube: live streams, full games and highlights, with thumbnails |
 | `/matches` | Beat the model: pick home / draw / away, see if you agree with the model (picks saved in the browser) |
 | `/rankings` | Power rankings: ASI explainer, movers, searchable table, follow clubs (saved in the browser) |
 | `/who-wins` | Pick any two clubs: "X come out on top in about 7 of 10 meetings", upset stakes, Show the math |
@@ -27,6 +28,10 @@ Built with React + Vite, no other runtime dependencies. Deploys to Vercel as-is 
 | `/contact` | Contact form (opens the visitor's email app, addressed to the team), Instagram DM, email |
 | `/methodology` | How the numbers work: each model in one sentence, full method underneath, validation table |
 | `/legal` | Copyright & terms: ownership, sharing with credit, data sources and club marks, corrections |
+
+## Live streams and live scores
+
+Each match in the data can carry `stream` (YouTube link), `streamStatus` (`live`, `replay` or `scheduled`) and `liveScore` (`{ home, away, minute }`). Match cards show **Watch live** / **Watch the replay** and the score when those are set. Filling `liveScore` automatically means a backend job that reads the scoreboard from the stream; see the PR notes.
 
 ## Before launch
 

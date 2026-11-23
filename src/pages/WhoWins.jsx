@@ -38,15 +38,15 @@ export default function WhoWins() {
 
   let headline;
   if (same) headline = 'Pick two different clubs';
-  else if (nA === 5) headline = 'Too close to call: about 5 meetings each out of 10';
-  else headline = `${short(fav.name)} come out on top in about ${Math.max(nA, 10 - nA)} of 10 meetings`;
+  else if (nA === 5) headline = 'Too close to call. About 5 wins each out of 10';
+  else headline = `${short(fav.name)} win about ${Math.max(nA, 10 - nA)} out of 10`;
 
   return (
     <div className="container page" style={{ maxWidth: 1080 }}>
       <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
         <p className="eyebrow">Head to head</p>
         <h1 className="display display-xl">Who wins?</h1>
-        <p className="lead">Pick any two clubs. We'll tell you what the numbers say, in plain English.</p>
+        <p className="lead">Pick two clubs and see how a game between them would likely go.</p>
       </div>
 
       <section className="versus">
@@ -56,7 +56,7 @@ export default function WhoWins() {
       </section>
 
       <section className="card" style={{ padding: 32, display: 'flex', flexDirection: 'column', gap: 24 }}>
-        <p className="eyebrow">The answer</p>
+        <p className="eyebrow">Prediction</p>
         <h2 className="display" style={{ fontSize: 'clamp(34px, 5vw, 52px)', lineHeight: 0.95 }} aria-live="polite">{headline}</h2>
         {!same && (
           <>
@@ -71,7 +71,7 @@ export default function WhoWins() {
                   );
                 })}
               </div>
-              <p className="muted small" style={{ margin: '12px 0 0' }}>Each circle is one meeting out of ten.</p>
+              <p className="muted small" style={{ margin: '12px 0 0' }}>If they played 10 times (draws counted as half a win).</p>
             </div>
             <div className="grid grid-auto">
               <div style={{ background: 'var(--surface-2)', borderRadius: 12, padding: 20 }}>
@@ -79,8 +79,8 @@ export default function WhoWins() {
                 <p style={{ margin: '6px 0 0', fontSize: 16 }}>A win would be worth <b>+{Math.round(25 * eFav)} ASI points</b> to {short(dog.name)}, and cost {short(fav.name)} the same.</p>
               </div>
               <div style={{ background: 'var(--surface-2)', borderRadius: 12, padding: 20 }}>
-                <div className="up small" style={{ letterSpacing: '0.08em', textTransform: 'uppercase' }}>If the favourite wins</div>
-                <p style={{ margin: '6px 0 0', fontSize: 16 }}>{short(fav.name)} would gain just <b>+{eloStake(eFav)} points</b>. Beating a lower-rated side earns less.</p>
+                <div className="up small" style={{ letterSpacing: '0.08em', textTransform: 'uppercase' }}>If the favorite wins</div>
+                <p style={{ margin: '6px 0 0', fontSize: 16 }}>{short(fav.name)} would gain just <b>+{eloStake(eFav)} points</b>. Beating a weaker team doesn't move the rating much.</p>
               </div>
             </div>
             <ShowTheMath>

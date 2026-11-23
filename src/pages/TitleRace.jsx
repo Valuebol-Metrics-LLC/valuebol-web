@@ -23,14 +23,14 @@ export default function TitleRace() {
   const left = Math.max(0, c.projGp - c.gp);
 
   let verdict; let tone = '';
-  if (p1 >= 99.5) { verdict = 'Champions. 1st is locked in.'; tone = 'accent'; }
-  else if (p1 === 0) { verdict = 'No. The title is gone.'; tone = 'down'; }
-  else verdict = `Still alive: ${pct(f[0])} chance.`;
+  if (p1 >= 99.5) { verdict = 'Clinched 1st place.'; tone = 'accent'; }
+  else if (p1 === 0) { verdict = 'Out of the title race.'; tone = 'down'; }
+  else verdict = `${pct(f[0])} chance to win the conference.`;
   let detail;
-  if (p1 >= 99.5) detail = `${c.name} finished top in every one of the ${race.runs.toLocaleString('en-US')} simulated seasons.`;
-  else if (t4 >= 99.5) detail = `But a top-4 finish is safe. Most likely spot: ${ORD[best]}, in ${Math.round(val(f[best]))} of 100 seasons.`;
-  else if (t4 > 0) detail = `The real fight is for the top 4. They get there in about ${Math.round(t4)} of 100 seasons. Most likely finish: ${ORD[best]}.`;
-  else detail = `The top 4 is out of reach too. Most likely finish: ${ORD[best]}, in ${Math.round(val(f[best]))} of 100 seasons.`;
+  if (p1 >= 99.5) detail = `${c.name} finished first in all ${race.runs.toLocaleString('en-US')} simulations.`;
+  else if (t4 >= 99.5) detail = `Top 4 is safe. Most likely finish: ${ORD[best]} (${Math.round(val(f[best]))}% of simulations).`;
+  else if (t4 > 0) detail = `Top 4 in ${Math.round(t4)}% of simulations. Most likely finish: ${ORD[best]}.`;
+  else detail = `No top 4 finish in any simulation. Most likely finish: ${ORD[best]} (${Math.round(val(f[best]))}%).`;
 
   const mine = calls[sel] || {};
   let add = 0; let called = 0;
@@ -47,7 +47,7 @@ export default function TitleRace() {
           <p className="eyebrow">UPSL {race.conference} · {race.season}</p>
           <h1 className="display display-xl">Can we still win it?</h1>
         </div>
-        <p className="muted" style={{ maxWidth: 380, margin: 0 }}>We played out the rest of the season <b style={{ color: 'var(--text)' }}>{race.runs.toLocaleString('en-US')} times</b>. Pick your club to see how it ends.</p>
+        <p className="muted" style={{ maxWidth: 380, margin: 0 }}>We simulate the rest of the season <b style={{ color: 'var(--text)' }}>{race.runs.toLocaleString('en-US')} times</b>. Pick a club to see where it finishes.</p>
       </section>
 
       <nav aria-label="Pick a club" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 6, marginTop: -24 }}>
@@ -79,7 +79,7 @@ export default function TitleRace() {
             ))}
           </div>
           <div>
-            <p className="stat-label" style={{ margin: '0 0 10px' }}>Where they finish, out of 100 seasons</p>
+            <p className="stat-label" style={{ margin: '0 0 10px' }}>Finishing position, % of simulations</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(13, minmax(0,1fr))', gap: 6, alignItems: 'end', height: 150 }} aria-hidden="true">
               {f.map((v, i) => (
                 <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', gap: 4, height: 150 }}>
@@ -95,8 +95,8 @@ export default function TitleRace() {
         </div>
 
         <div className="side panel-accent" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>What if…</p>
-          <h3 className="display display-md" style={{ margin: 0 }}>Call each game left</h3>
+          <p className="eyebrow" style={{ color: 'var(--on-accent-2)' }}>What if</p>
+          <h3 className="display display-md" style={{ margin: 0 }}>Set results for the games left</h3>
           {left === 0 && <p style={{ margin: 0 }}>Their league season is finished. Final total: {c.pts} points.</p>}
           {Array.from({ length: left }, (_, g) => (
             <div key={g} style={{ background: 'rgba(0,0,0,0.2)', borderRadius: 12, padding: '10px 12px', display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -108,11 +108,11 @@ export default function TitleRace() {
             </div>
           ))}
           <div style={{ background: 'rgba(0,0,0,0.2)', borderRadius: 12, padding: 16 }} aria-live="polite">
-            <div className="small" style={{ color: 'var(--on-accent-2)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>Their total would be</div>
+            <div className="small" style={{ color: 'var(--on-accent-2)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>Points total</div>
             <div className="num" style={{ fontSize: 60 }}>{total} pts</div>
-            <div className="small">{!left ? 'No games left to play.' : called < left ? `Call all ${left} game${left > 1 ? 's' : ''}. Max possible: ${c.pts + 3 * left} pts.` : `That beats ${beats} clubs' current totals.`}</div>
+            <div className="small">{!left ? 'No games left to play.' : called < left ? `Call all ${left} game${left > 1 ? 's' : ''}. Max possible: ${c.pts + 3 * left} pts.` : `More than ${beats} clubs have right now.`}</div>
           </div>
-          <p className="small" style={{ margin: 0, color: 'var(--on-accent-2)' }}>The what-if adds up points only. The chances come from the simulations.</p>
+          <p className="small" style={{ margin: 0, color: 'var(--on-accent-2)' }}>This only adds up points. The percentages come from the simulations.</p>
         </div>
       </section>
 

@@ -87,31 +87,35 @@ img { max-width: 100%; }
 .accent { color: var(--accent-text); }
 
 /* Header */
-.site-header { background: var(--header); border-bottom: 1px solid var(--border-strong); position: sticky; top: 0; z-index: 10; }
-.site-header .container { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 36px; min-height: 72px; }
-.brand { display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--text); }
-.brand img { height: 30px; width: auto; display: block; }
-.brand span { font-family: var(--display); font-weight: 800; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1; }
-.nav { display: flex; flex-wrap: wrap; gap: 4px 24px; flex: 1 1 auto; align-self: stretch; }
-.nav a { display: flex; align-items: center; min-height: 44px; color: var(--text-2); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent; padding-top: 3px; }
-.nav a:hover { color: var(--text); }
-.nav a[aria-current='page'] { color: var(--text); border-bottom-color: var(--accent); }
-
+.site-header { background: var(--header); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.2); }
+.header-row { display: flex; align-items: center; gap: 28px; min-height: 64px; }
+.brand-inline { display: flex; align-items: center; gap: 10px; color: var(--text); flex: none; }
+.brand-inline span { font-family: var(--display); font-weight: 800; font-size: 24px; letter-spacing: 0.01em; text-transform: uppercase; line-height: 1; }
+.brand-inline:hover { color: var(--text); }
+.nav-main { display: flex; align-items: center; gap: 2px; flex: 1 1 auto; }
+.nav-main a, .tool-link { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 999px; color: var(--text-2); font-weight: 600; font-size: 15px; white-space: nowrap; }
+.nav-main a:hover, .tool-link:hover { color: var(--text); background: var(--surface-2); }
+.nav-main a[aria-current='page'], .tool-link[aria-current='page'] { color: var(--accent-text); background: var(--accent-soft); }
 .header-tools { display: flex; align-items: center; gap: 8px; margin-left: auto; }
-.icon-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); }
-.icon-btn:hover { border-color: var(--accent); color: var(--text); }
+.icon-btn { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-2); }
+.icon-btn:hover { color: var(--text); background: var(--surface-2); }
+.btn.btn-sm { min-height: 40px; padding: 0 16px; border-radius: 999px; text-transform: none; letter-spacing: 0; font-size: 14px; }
 .menu-btn { display: none; }
+.nav-mobile { display: flex; flex-direction: column; padding-bottom: 12px; }
+.nav-mobile a { display: flex; align-items: center; min-height: 48px; padding: 0 12px; border-radius: 10px; color: var(--text); font-weight: 600; font-size: 16px; }
+.nav-mobile a[aria-current='page'] { background: var(--accent-soft); color: var(--accent-text); }
 .logo-dark { display: none !important; }
 [data-theme='dark'] .logo-light { display: none !important; }
 [data-theme='dark'] .logo-dark { display: block !important; }
 
-@media (max-width: 860px) {
+@media (max-width: 1020px) {
+  .nav-main, .header-tools .tool-link, .header-tools .header-cta { display: none; }
   .menu-btn { display: inline-flex; }
-  .nav { display: none; flex-basis: 100%; flex-direction: column; gap: 0; padding-bottom: 12px; }
-  .nav.open { display: flex; }
-  .nav a { border-bottom: 1px solid var(--border); border-left: 3px solid transparent; padding: 0 12px; }
-  .nav a[aria-current='page'] { border-bottom-color: var(--border); border-left-color: var(--accent); }
 }
+
+/* Footer brand */
+.brand { display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--text); }
+.brand span { font-family: var(--display); font-weight: 800; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; line-height: 1; }
 
 /* Forms */
 .field { display: flex; flex-direction: column; gap: 6px; }

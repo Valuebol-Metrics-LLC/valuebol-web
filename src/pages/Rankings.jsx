@@ -55,8 +55,8 @@ export default function Rankings() {
           <p className="lead">{cov.activeClubs} active UPSL clubs, rated on every result since {cov.since}.</p>
         </div>
         <div className="side card card-pad" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <h2 className="display display-md">How the ASI works</h2>
-          <p style={{ margin: 0 }}>Beat a club and you take rating points from them. Beat a stronger club and you take more; lose to a weaker one and you drop more.</p>
+          <h2 className="display display-md">What the ASI is</h2>
+          <p style={{ margin: 0 }}>Every club has a rating. Win and you take points from the team you beat. Beat a better team and you take more. Lose to a weaker one and you lose more.</p>
           <div>
             <div aria-hidden="true" style={{ height: 10, borderRadius: 5, background: 'linear-gradient(90deg, var(--border), var(--accent))' }} />
             <div className="small muted" style={{ display: 'flex', justifyContent: 'space-between', marginTop: 8 }}>

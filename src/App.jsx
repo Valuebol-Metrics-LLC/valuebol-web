@@ -9,6 +9,7 @@ import TitleRace from './pages/TitleRace.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Legal from './pages/Legal.jsx';
+import Videos from './pages/Videos.jsx';
 
 const ROUTES = {
   '/': Home,
@@ -20,6 +21,7 @@ const ROUTES = {
   '/about': About,
   '/contact': Contact,
   '/legal': Legal,
+  '/videos': Videos,
 };
 
 function NotFound() {

@@ -5,9 +5,9 @@ import { site } from '../config.js';
 
 const AUDIENCES = [
   ['Players', 'See your club’s ranking and your goals, and share your season.'],
-  ['Clubs', 'Know where you stand among 400+ active clubs and show it off.'],
-  ['Fans', 'Pick results, compare clubs and follow the title races.'],
-  ['Sponsors', 'Find the clubs and audiences worth backing.'],
+  ['Clubs', 'See where you rank among 400+ active clubs.'],
+  ['Fans', 'Make picks, compare clubs and follow the title races.'],
+  ['Sponsors', 'Find clubs and audiences to back.'],
 ];
 
 export default function About() {
@@ -34,18 +34,18 @@ export default function About() {
         <div className="grow card card-pad" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <h2 className="display display-md">Why the UPSL</h2>
           <p style={{ margin: 0 }}>
-            The UPSL, founded in 2011, is the largest and most competitive pro-development league in North America. Hundreds of clubs and thousands of players, and until now, almost no numbers about them.
+            The UPSL, founded in 2011, is the largest and most competitive pro-development league in North America. Hundreds of clubs play in it, but there has been very little data on them.
           </p>
         </div>
         <div className="side card card-pad" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <h2 className="display display-md">How we work</h2>
-          <p style={{ margin: 0 }}>Serious models, explained simply. Every answer comes in plain English first, with the full math one tap away.</p>
+          <p style={{ margin: 0 }}>We use proper statistical models and show the results in a way anyone can follow. The full methods are public.</p>
           <Link to="/methodology" className="link-arrow">How the numbers work →</Link>
         </div>
       </section>
 
       <section>
-        <h2 className="display display-lg" style={{ marginBottom: 16 }}>Built for</h2>
+        <h2 className="display display-lg" style={{ marginBottom: 16 }}>Who it's for</h2>
         <div className="grid grid-auto">
           {AUDIENCES.map(([who, what]) => (
             <div key={who} className="card card-pad" style={{ borderTop: '3px solid var(--accent)' }}>
