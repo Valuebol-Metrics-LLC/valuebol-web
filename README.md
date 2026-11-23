@@ -51,3 +51,10 @@ All pages read through `src/lib/data.js`. Right now it returns a **snapshot** of
 ## Next up
 
 Live data from the pipeline, every conference in Title race, Crowd vs the Model voting, player profiles with Instagram share cards, and the community scouts program.
+
+## Clubs, search and match pages
+
+- Press `/` (or the search button / "Clubs" tab on phones) to find any club. Each club has a page at `/club-<name>`.
+- Club websites, Instagram handles and UPSL pages live in `src/data/clubs.js`. Only add links you've checked; the page asks for missing ones.
+- Each featured match has a preview at `/match-<home>-vs-<away>-<date>` with an add-to-calendar button (1-hour reminder) and share link.
+- Homepage background video: set in `src/config.js` (`heroVideo`). Uses a muted YouTube embed now; put an `.mp4` in `public/` for a faster, cleaner loop.

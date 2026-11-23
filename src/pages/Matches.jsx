@@ -3,7 +3,7 @@ import Crest from '../components/Crest.jsx';
 import { MatchStream } from '../components/Video.jsx';
 import ShowTheMath from '../components/ShowTheMath.jsx';
 import { Link } from '../lib/router.jsx';
-import { getFeaturedMatches, getModelValidation, describeOdds, formatDate } from '../lib/data.js';
+import { getFeaturedMatches, getModelValidation, describeOdds, formatDate, clubPath, matchPath } from '../lib/data.js';
 
 const PICKS_KEY = 'valuebol.picks';
 const LABEL = ['home win', 'draw', 'away win'];
@@ -30,12 +30,12 @@ function MatchPick({ m, pick, onPick }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr)', alignItems: 'center', gap: 10, textAlign: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
           <Crest name={m.home} size={52} />
-          <b>{m.home}</b><span className="muted small">ASI #{m.homeRank}</span>
+          <Link to={clubPath(m.home)} style={{ fontWeight: 700, color: 'var(--text)' }}>{m.home}</Link><span className="muted small">ASI #{m.homeRank}</span>
         </div>
         <span className="num muted" style={{ fontSize: 22 }}>VS</span>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
           <Crest name={m.away} size={52} />
-          <b>{m.away}</b><span className="muted small">ASI #{m.awayRank}</span>
+          <Link to={clubPath(m.away)} style={{ fontWeight: 700, color: 'var(--text)' }}>{m.away}</Link><span className="muted small">ASI #{m.awayRank}</span>
         </div>
       </div>
       {closed ? (
@@ -59,7 +59,10 @@ function MatchPick({ m, pick, onPick }) {
       ) : (
         <p className="muted small" style={{ margin: 0, padding: 14, background: 'var(--surface-2)', borderRadius: 10, textAlign: 'center' }}>No prediction yet. One of these clubs hasn't played enough games.</p>
       )}
-      <MatchStream m={m} />
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginTop: 'auto' }}>
+        <MatchStream m={m} />
+        <Link to={matchPath(m)} className="link-arrow">Preview →</Link>
+      </div>
     </article>
   );
 }

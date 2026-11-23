@@ -1,5 +1,7 @@
 import { RouterProvider, useRouter, Link } from './lib/router.jsx';
-import { Header, Footer } from './components/Layout.jsx';
+import { Header, Footer, TabBar, SearchProvider } from './components/Layout.jsx';
+import Club from './pages/Club.jsx';
+import Match from './pages/Match.jsx';
 import Home from './pages/Home.jsx';
 import Rankings from './pages/Rankings.jsx';
 import WhoWins from './pages/WhoWins.jsx';
@@ -35,18 +37,24 @@ function NotFound() {
 
 function Routes() {
   const { path } = useRouter();
-  const Page = ROUTES[path.replace(/\/+$/, '') || '/'] ?? NotFound;
+  const clean = path.replace(/\/+$/, '') || '/';
+  if (clean.startsWith('/club-')) return <Club slug={clean.slice(6)} />;
+  if (clean.startsWith('/match-')) return <Match slug={clean.slice(7)} />;
+  const Page = ROUTES[clean] ?? NotFound;
   return <Page />;
 }
 
 export default function App({ initialPath }) {
   return (
     <RouterProvider initialPath={initialPath}>
-      <Header />
-      <main>
-        <Routes />
-      </main>
-      <Footer />
+      <SearchProvider>
+        <Header />
+        <main>
+          <Routes />
+        </main>
+        <Footer />
+        <TabBar />
+      </SearchProvider>
     </RouterProvider>
   );
 }

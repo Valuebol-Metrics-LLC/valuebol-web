@@ -1,14 +1,9 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from '../lib/router.jsx';
 import Crest from '../components/Crest.jsx';
 import ShowTheMath from '../components/ShowTheMath.jsx';
-import { getAsOf, getCoverage, getMovers, getRankings, getRatingRange, formatDate } from '../lib/data.js';
-
-const FOLLOW_KEY = 'valuebol.followedClubs';
-
-function loadFollowed() {
-  try { return JSON.parse(localStorage.getItem(FOLLOW_KEY) || '[]'); } catch { return []; }
-}
+import { useFollowed } from '../lib/follow.js';
+import { getAsOf, getCoverage, getMovers, getRankings, getRatingRange, formatDate, clubPath } from '../lib/data.js';
 
 function MoverCard({ label, tone, name, sub, value }) {
   return (
@@ -31,15 +26,7 @@ export default function Rankings() {
   const cov = getCoverage();
   const [query, setQuery] = useState('');
   const [onlyMine, setOnlyMine] = useState(false);
-  const [followed, setFollowed] = useState([]);
-
-  useEffect(() => setFollowed(loadFollowed()), []);
-
-  const toggle = (name) => {
-    const next = followed.includes(name) ? followed.filter((n) => n !== name) : [...followed, name];
-    setFollowed(next);
-    try { localStorage.setItem(FOLLOW_KEY, JSON.stringify(next)); } catch { /* storage unavailable */ }
-  };
+  const [followed, toggle] = useFollowed();
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -118,10 +105,10 @@ export default function Rankings() {
                       {t.move < 0 && <span className="down small">▼{-t.move}</span>}
                     </td>
                     <td>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 600 }}>
+                      <Link to={clubPath(t.name)} style={{ display: 'flex', alignItems: 'center', gap: 12, fontWeight: 600, color: 'var(--text)' }}>
                         <Crest name={t.name} />
                         {t.name}
-                      </span>
+                      </Link>
                     </td>
                     <td className="muted small" style={{ whiteSpace: 'nowrap' }}>{t.conference}</td>
                     <td className="center num" style={{ fontSize: 18, fontWeight: 700 }}>{t.record}</td>

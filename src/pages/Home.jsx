@@ -1,8 +1,67 @@
+import { useEffect, useState } from 'react';
 import { Link } from '../lib/router.jsx';
-import { SectionHead, InstagramBand } from '../components/Layout.jsx';
+import { SectionHead, InstagramBand, useOpenSearch } from '../components/Layout.jsx';
 import Crest from '../components/Crest.jsx';
 import VideoCard, { MatchStream } from '../components/Video.jsx';
-import { getVideos, getCoverage, getFeaturedMatches, getModelValidation, getRankings, getTopScorers, describeOdds, formatDate } from '../lib/data.js';
+import { SearchIcon } from '../components/Icons.jsx';
+import { useFollowed } from '../lib/follow.js';
+import { heroVideo } from '../config.js';
+import { getVideos, getCoverage, getFeaturedMatches, getModelValidation, getRankings, getTopScorers, getAllClubs, describeOdds, formatDate, clubPath, matchPath, youtubeUrl } from '../lib/data.js';
+
+/** Muted looping match footage behind the hero, under a dark green wash. */
+function HeroVideo() {
+  const [play, setPlay] = useState(false);
+  useEffect(() => {
+    const calm = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const saveData = navigator.connection?.saveData;
+    if (!calm && !saveData) setPlay(true);
+  }, []);
+  const { youtubeId: id, start, mp4 } = heroVideo;
+  const src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&start=${start}`;
+  return (
+    <div className="hero-media" aria-hidden="true">
+      <img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+      {play && (mp4
+        ? <video src={mp4} autoPlay muted loop playsInline />
+        : <iframe src={src} title="Background video" tabIndex={-1} allow="autoplay; encrypted-media" />)}
+      <div className="hero-wash" />
+    </div>
+  );
+}
+
+function YourClubs() {
+  const [followed] = useFollowed();
+  const openSearch = useOpenSearch();
+  const all = getAllClubs();
+  const mine = followed.map((n) => all.find((c) => c.name === n)).filter(Boolean);
+  if (!mine.length) {
+    return (
+      <section className="card card-pad follow-nudge">
+        <div style={{ flex: '1 1 300px' }}>
+          <h2 className="display display-md">Follow your club</h2>
+          <p className="muted small" style={{ margin: '4px 0 0' }}>Find your team, tap Follow, and it shows up here every time you visit.</p>
+        </div>
+        <button type="button" className="btn btn-primary" onClick={openSearch}><SearchIcon width={18} height={18} /> Find my club</button>
+      </section>
+    );
+  }
+  return (
+    <section>
+      <SectionHead title="Your clubs" action={<button type="button" className="link-arrow" style={{ background: 'none', border: 0, color: 'var(--accent-text)' }} onClick={openSearch}>Add a club +</button>} />
+      <div className="club-chips">
+        {mine.map((c) => (
+          <Link key={c.name} to={clubPath(c.name)} className="club-chip">
+            <Crest name={c.name} size={40} />
+            <span style={{ minWidth: 0 }}>
+              <span style={{ display: 'block', fontWeight: 700 }}>{c.name}</span>
+              <span className="muted small">{c.rank ? `#${c.rank}` : 'Unranked'}{c.conference ? ` · ${c.conference}` : ''}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function MatchCard({ m }) {
   return (
@@ -15,7 +74,7 @@ function MatchCard({ m }) {
         <div key={name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Crest name={name} size={40} />
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontWeight: 700 }}>{name}</div>
+            <Link to={clubPath(name)} style={{ fontWeight: 700, color: 'var(--text)' }}>{name}</Link>
             <div className="muted small">ASI #{rank}</div>
           </div>
           {m.probs && <span className={`num ${i === 0 ? 'accent' : 'down'}`} style={{ fontSize: 26 }}>{m.probs[i]}%</span>}
@@ -35,7 +94,10 @@ function MatchCard({ m }) {
       ) : (
         <p className="muted small" style={{ margin: 0 }}>No prediction yet. One of these clubs hasn't played enough games.</p>
       )}
-      <MatchStream m={m} />
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginTop: 'auto' }}>
+        <MatchStream m={m} />
+        <Link to={matchPath(m)} className="link-arrow">Preview →</Link>
+      </div>
     </article>
   );
 }
@@ -47,24 +109,27 @@ export default function Home() {
   const videos = getVideos().filter((v) => !v.featured).slice(0, 3);
   const model = getModelValidation();
   const scorers = getTopScorers();
+  const openSearch = useOpenSearch();
 
   return (
     <>
-      <section style={{ borderBottom: '1px solid var(--border-strong)', background: 'var(--bg-band)' }}>
-        <div className="container" style={{ padding: '64px 24px 48px', display: 'flex', flexDirection: 'column', gap: 36 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, maxWidth: 780 }}>
-            <p className="eyebrow">UPSL analytics · Fall 2026</p>
-            <h1 className="display display-xl">
-              Bridging the gap between amateur and <span className="accent">professional</span> football.
+      <section className="hero">
+        <HeroVideo />
+        <div className="container hero-inner">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, maxWidth: 1000 }}>
+            <p className="eyebrow hero-eyebrow">UPSL analytics · Fall 2026</p>
+            <h1 className="display hero-title">
+              Bridging the gap between amateur and <span className="hero-accent">professional</span> football.
             </h1>
-            <p className="lead">Rankings, match predictions and stats for every club in the UPSL.</p>
+            <p className="lead hero-lead">Rankings, match predictions and stats for every club in the UPSL.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-              <Link to="/who-wins" className="btn btn-primary">Compare two clubs</Link>
-              <Link to="/rankings" className="btn">See the rankings</Link>
+              <button type="button" className="btn btn-primary" onClick={openSearch}><SearchIcon width={18} height={18} /> Find your club</button>
+              <Link to="/rankings" className="btn btn-ghost">See the rankings</Link>
+              <a href={youtubeUrl(heroVideo.youtubeId)} target="_blank" rel="noreferrer" className="btn btn-ghost">▶ Watch the final</a>
             </div>
           </div>
-          <div className="stat-strip">
-            <div><div className="num" >{cov.teams}</div><div className="stat-label">Teams tracked</div></div>
+          <div className="stat-strip hero-stats">
+            <div><div className="num">{cov.teams}</div><div className="stat-label">Teams tracked</div></div>
             <div><div className="num">{cov.conferences}</div><div className="stat-label">Conferences</div></div>
             <div><div className="num">{cov.matches}</div><div className="stat-label">Matches analysed</div></div>
             <div><div className="num">{cov.since}</div><div className="stat-label">Data since</div></div>
@@ -73,6 +138,8 @@ export default function Home() {
       </section>
 
       <div className="container page">
+        <YourClubs />
+
         <section>
           <SectionHead title="This week's big matches" action={<Link to="/matches" className="link-arrow">Make your picks →</Link>} />
           <div className="grid grid-auto">
@@ -85,7 +152,7 @@ export default function Home() {
             <SectionHead title="Power rankings" sub="Top 5 of 442 active clubs" action={<Link to="/rankings" className="link-arrow">Full rankings →</Link>} />
             <div className="card">
               {top.map((t, i) => (
-                <Link key={t.name} to="/rankings" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none', color: 'var(--text)' }}>
+                <Link key={t.name} to={clubPath(t.name)} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 20px', borderTop: i ? '1px solid var(--border)' : 'none', color: 'var(--text)' }}>
                   <span className={`num ${t.rank <= 3 ? 'accent' : ''}`} style={{ fontSize: 28, width: 28 }}>{t.rank}</span>
                   <Crest name={t.name} />
                   <span style={{ flex: 1, minWidth: 0 }}>
@@ -105,7 +172,7 @@ export default function Home() {
                   <span className="num muted" style={{ fontSize: 22, width: 18 }}>{i + 1}</span>
                   <span style={{ flex: 1, minWidth: 0 }}>
                     <span style={{ display: 'block', fontWeight: 700 }}>{p.name}</span>
-                    <span className="muted small">{p.club}</span>
+                    <Link to={clubPath(p.club)} className="small">{p.club}</Link>
                   </span>
                   <span className="num" style={{ fontSize: 30 }}>{p.goals}</span>
                 </div>

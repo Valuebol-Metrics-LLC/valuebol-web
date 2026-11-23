@@ -9,3 +9,11 @@ export const site = {
 };
 
 export const instagramUrl = `https://www.instagram.com/${site.instagramHandle}/`;
+
+// Homepage background video. Uses a muted, looping YouTube embed until Valuebol has its own clip;
+// drop an .mp4 into public/ and set `mp4: 'hero.mp4'` to use that instead (loads faster, no YouTube UI).
+export const heroVideo = {
+  youtubeId: 'jkA4f8Gpgv0', // 2026 UPSL National Final highlights
+  start: 20,
+  mp4: null,
+};

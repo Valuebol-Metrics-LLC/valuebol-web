@@ -1,8 +1,34 @@
-import { useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { Link, useRouter } from '../lib/router.jsx';
 import { useTheme } from '../lib/theme.js';
 import { site, instagramUrl } from '../config.js';
-import { InstagramIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon } from './Icons.jsx';
+import { InstagramIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon, HomeIcon, BallIcon, ListIcon, PlayIcon, SearchIcon } from './Icons.jsx';
+import { ClubSearchDialog, SearchTrigger } from './ClubSearch.jsx';
+
+const SearchContext = createContext(() => {});
+export const useOpenSearch = () => useContext(SearchContext);
+
+/** Holds the club-search dialog so the header, tab bar and pages can all open it. "/" opens it too. */
+export function SearchProvider({ children }) {
+  const [open, setOpen] = useState(false);
+  const openSearch = useCallback(() => setOpen(true), []);
+  const close = useCallback(() => setOpen(false), []);
+  useEffect(() => {
+    const onKey = (e) => {
+      const t = e.target;
+      const typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+      if (e.key === '/' && !typing) { e.preventDefault(); setOpen(true); }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+  return (
+    <SearchContext.Provider value={openSearch}>
+      {children}
+      <ClubSearchDialog open={open} onClose={close} />
+    </SearchContext.Provider>
+  );
+}
 
 const NAV = [
   { to: '/', label: 'Home' },
@@ -14,6 +40,7 @@ const NAV = [
 ];
 const NAV_MORE = [
   { to: '/about', label: 'About' },
+  { to: '/methodology', label: 'How the numbers work' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -30,10 +57,20 @@ export function Header() {
   const [theme, toggleTheme] = useTheme();
   const [open, setOpen] = useState(false);
   const { path } = useRouter();
+  const openSearch = useOpenSearch();
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => setOpen(false), [path]);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  // On the homepage the header sits on top of the video until you scroll.
+  const overHero = path === '/' && !scrolled && !open;
 
   return (
-    <header className="site-header">
+    <header className={`site-header${overHero ? ' over-hero' : ''}`}>
       <div className="container header-row">
         <Link to="/" className="brand-inline" aria-label={`${site.name} home`}>
           <Logo height={26} />
@@ -43,8 +80,8 @@ export function Header() {
           {NAV.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
         </nav>
         <div className="header-tools">
-          <Link to="/about" className="tool-link">About</Link>
-          <a className="icon-btn" href={instagramUrl} target="_blank" rel="noreferrer" aria-label={`Instagram @${site.instagramHandle}`}>
+          <SearchTrigger onOpen={openSearch} />
+          <a className="icon-btn ig-btn" href={instagramUrl} target="_blank" rel="noreferrer" aria-label={`Instagram @${site.instagramHandle}`}>
             <InstagramIcon />
           </a>
           <button type="button" className="icon-btn" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
@@ -65,6 +102,26 @@ export function Header() {
   );
 }
 
+const TABS = [
+  { to: '/', label: 'Home', Icon: HomeIcon },
+  { to: '/matches', label: 'Matches', Icon: BallIcon },
+  { to: '/rankings', label: 'Rankings', Icon: ListIcon },
+  { to: '/videos', label: 'Videos', Icon: PlayIcon },
+];
+
+/** Thumb-reach navigation on phones. */
+export function TabBar() {
+  const openSearch = useOpenSearch();
+  return (
+    <nav className="tab-bar" aria-label="Quick">
+      {TABS.map(({ to, label, Icon }) => (
+        <Link key={to} to={to}><Icon /><span>{label}</span></Link>
+      ))}
+      <button type="button" onClick={openSearch}><SearchIcon /><span>Clubs</span></button>
+    </nav>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -79,6 +136,7 @@ export function Footer() {
         </div>
         <nav aria-label="Footer" style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 20px' }}>
           <Link to="/about">About us</Link>
+          <Link to="/rankings">All clubs</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/methodology">How the numbers work</Link>
           <Link to="/legal">Copyright &amp; terms</Link>
