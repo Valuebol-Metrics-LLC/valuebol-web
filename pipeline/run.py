@@ -34,10 +34,15 @@ sys.path.insert(0, str(HERE))
 from upsl.fetch import DATA_DIR, list_seasons  # noqa: E402
 
 
-def step(name: str, *args: str, allow_fail: bool = False) -> int:
+def step(name: str, *args: str, allow_fail: bool = False, timeout: float | None = None) -> int:
     print(f"\n=== {name}: {' '.join(args)} ===", flush=True)
     t = time.time()
-    code = subprocess.call([sys.executable, "-m", *args], cwd=HERE)
+    try:
+        code = subprocess.call([sys.executable, "-m", *args], cwd=HERE, timeout=timeout)
+    except subprocess.TimeoutExpired:
+        # fetch_scorers saves a checkpoint every 100 matches, so the next run resumes here.
+        print(f"=== {name} stopped after {timeout / 60:.0f} min; the next run continues where it left off ===", flush=True)
+        return 0
     print(f"=== {name} finished in {time.time() - t:.0f}s, exit {code} ===", flush=True)
     # fetch exits 2 when its rebuilt table disagrees with official standings for a few
     # clubs (point deductions, voided games). That is a warning, not a failure.
@@ -51,6 +56,8 @@ def main() -> None:
     p.add_argument("mode", choices=["full", "update"])
     p.add_argument("--seasons", type=int, default=2)
     p.add_argument("--skip-scorers", action="store_true")
+    p.add_argument("--scorer-minutes", type=float, default=150,
+                   help="time budget for goal-scorer scraping per run (default 150); it resumes next run")
     p.add_argument("--division", default="premier")
     a = p.parse_args()
     div = ["--division", a.division]
@@ -69,11 +76,13 @@ def main() -> None:
     step("Rosters (clubs active in the last months)", "upsl.fetch_rosters", *div, allow_fail=True)
 
     if not a.skip_scorers:
-        if a.mode == "full":
-            step("Goal scorers, every season", "upsl.fetch_scorers", *div, "--all-seasons", allow_fail=True)
-        else:
+        # Newest seasons first so current numbers are right, then chip away at history.
+        budget = a.scorer_minutes * 60
+        if a.mode == "update":
             for s in seasons:
                 step(f"Goal scorers {s.season}", "upsl.fetch_scorers", *div, "--season", s.season, allow_fail=True)
+        step("Goal scorers, every season (resumable)", "upsl.fetch_scorers", *div, "--all-seasons",
+             allow_fail=True, timeout=budget)
 
     step("Matches + standings JSON", "upsl.export_frontend", *div)
     step("Dixon-Coles predictions", "upsl.dixon_coles", *div)
