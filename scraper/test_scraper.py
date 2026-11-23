@@ -39,7 +39,8 @@ Marchi</span><span class="single-team__roster-player-title">DEFENDER</span><span
 <footer><a href="https://www.facebook.com/upslsoccer">fb</a></footer></body></html>
 """
 
-LYNCH = """<html><body><div class="single-team__info"><img src="/lfc.png"></div>
+LYNCH = """<html><body><div class="single-team__info"><img src="/lfc.png"><h1>Lynchburg FC</h1><p>DMV South</p><p>Lynchburg,
+VA</p></div><select id="single__select-season"><option selected>Select a Season</option><option>2024 Spring</option></select>
 <table id="single-team-schedule"><tbody><tr><td><a>Lynchburg FC</a></td><td><a>DC United U19</a></td><td>04/20/2024</td><td>4</td><td>1</td><td>City Stadium</td></tr></tbody></table></body></html>"""
 
 PLAIN = "<html><body><div class='single-team__header'><img src='/default-crest.png'></div></body></html>"
@@ -97,6 +98,8 @@ def main():
     assert cn["logo"] == "logos/chicago-nation-fc.png" and cn["logo_source"].endswith("cnfc-big.png"), cn
     assert "facebook" not in cn, "league footer link leaked"
     lf = teams["Lynchburg FC"]
+    assert lf["city"] == "Lynchburg, VA", lf
+    assert "2024 Spring" in (S.DATA_DIR / "results.csv").read_text()
     assert lf["division"] == "division1" and lf["logo_source"].endswith("/lfc.png"), lf
     assert not any(teams[f"Club {i}"].get("logo") for i in range(6)), "placeholder crest kept"
     assert len(list(S.LOGO_DIR.glob("*.png"))) == 2

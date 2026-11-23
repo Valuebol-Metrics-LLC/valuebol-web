@@ -55,6 +55,7 @@ UA = (
 )
 DELAY = 0.8  # seconds between requests, to be polite to upsl.com
 LOGO_SIZE = 256
+US_STATES = set("AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY PR".split())
 
 # Handles that belong to the league or to post links, not to a club.
 LEAGUE_HANDLES = {"upslsoccer", "upsl", "upslwomen", "upslacademy", "p", "reel", "reels", "explore", "accounts", "stories", "tv"}
@@ -242,6 +243,13 @@ def parse_team_page(html: str, url: str) -> dict:
     loc = region.select_one("[class*='location'], [class*='city']")
     if loc:
         city = " ".join(loc.get_text(" ", strip=True).split()) or None
+    if not city:  # club pages print it as its own short line, e.g. "Portland,\nOR"
+        for el in region.find_all(True):
+            txt = " ".join(el.get_text(" ", strip=True).split())
+            m = re.fullmatch(r"([A-Za-z.'\- ]{2,30}?)\s*,\s*([A-Z]{2})", txt)
+            if m and m.group(2) in US_STATES:
+                city = f"{m.group(1).strip()}, {m.group(2)}"
+                break
 
     return {"logo": logo, "city": city, **links}
 
@@ -267,8 +275,13 @@ def parse_results(html: str) -> list[dict]:
     table has been Home | Away | Date | H | A | Venue (UPSL-Webscraper, 2024) and
     Home | Away | Date | Time | H | A | Venue (2026). Played games carry upsl__show__results."""
     soup = BeautifulSoup(html, "html.parser")
-    season_opt = soup.select_one("#single__select-season option[selected]")
-    season = season_opt.get_text(strip=True) if season_opt else None
+    season = None
+    opts = soup.select("#single__select-season option")
+    for o in sorted(opts, key=lambda o: o.has_attr("selected"), reverse=True):  # selected first
+        t = o.get_text(strip=True)
+        if re.search(r"\d{4}", t):
+            season = t
+            break
     table = soup.select_one("#single-team-schedule")
     if not table:
         return []
