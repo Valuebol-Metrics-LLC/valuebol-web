@@ -30,7 +30,7 @@ Built with React + Vite, no other runtime dependencies. Deploys to Vercel as-is 
 
 ## Before launch
 
-Set the real Instagram handle and contact email in `src/config.js` (both are placeholders now).
+Set the real Instagram handle in `src/config.js` (still a placeholder). The contact email is set.
 
 ## Where the data comes from
 
