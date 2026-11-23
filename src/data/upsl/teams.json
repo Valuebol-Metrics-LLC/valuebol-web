@@ -40,6 +40,106 @@
   "logo": "logos/afc-academy.png"
  },
  {
+  "id": "894326",
+  "name": "NY Renegades FC",
+  "slug": "ny-renegades-fc",
+  "conference": "American North",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/ny-renegades-fc-894326/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/01/615236.jpg",
+  "logo": "logos/ny-renegades-fc.png"
+ },
+ {
+  "id": "909364",
+  "name": "Athletum Miami FC",
+  "slug": "athletum-miami-fc",
+  "conference": "Florida South - South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/athletum-miami-fc-909364/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/02/063145.jpg",
+  "logo": "logos/athletum-miami-fc.png"
+ },
+ {
+  "id": "66603",
+  "name": "Miami FC U20",
+  "slug": "miami-fc-u20",
+  "conference": "Florida South - South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/miami-fc-u20-66603/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/08/502435.jpg",
+  "logo": "logos/miami-fc-u20.png"
+ },
+ {
+  "id": "792211",
+  "name": "Miami United FC",
+  "slug": "miami-united-fc",
+  "conference": "Florida South - South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/miami-united-fc-792211/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/01/139893-1.jpg",
+  "logo": "logos/miami-united-fc.png"
+ },
+ {
+  "id": "808553",
+  "name": "Inter City FC",
+  "slug": "inter-city-fc",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/inter-city-fc-808553/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/08/065140.jpg",
+  "logo": "logos/inter-city-fc.png"
+ },
+ {
+  "id": "83086",
+  "name": "Lakeland United",
+  "slug": "lakeland-united",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/lakeland-united-83086/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/065023-4.jpg",
+  "logo": "logos/lakeland-united.png"
+ },
+ {
+  "id": "976796",
+  "name": "PCU Pelicans SC",
+  "slug": "pcu-pelicans-sc",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/pcu-pelicans-sc-976796/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2026/01/231829.jpg",
+  "logo": "logos/pcu-pelicans-sc.png"
+ },
+ {
+  "id": "954388",
+  "name": "Sarasota Paradise",
+  "slug": "sarasota-paradise",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/sarasota-paradise-954388/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2026/01/928804.jpg",
+  "logo": "logos/sarasota-paradise.png"
+ },
+ {
+  "id": "478282",
+  "name": "Shock City FC",
+  "slug": "shock-city-fc",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/shock-city-fc-478282/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2026/01/853137.jpg",
+  "logo": "logos/shock-city-fc.png"
+ },
+ {
+  "id": "108935",
+  "name": "West Florida Flames",
+  "slug": "west-florida-flames",
+  "conference": "Florida West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/west-florida-flames-108935/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/01/242687.jpg",
+  "logo": "logos/west-florida-flames.png"
+ },
+ {
   "id": "637353",
   "name": "314 Soccer Club STL",
   "slug": "314-soccer-club-stl",
@@ -60,6 +160,36 @@
   "logo": "logos/1859-fc.png"
  },
  {
+  "id": "514627",
+  "name": "Tennessee Tempo FC",
+  "slug": "tennessee-tempo-fc",
+  "conference": "KY - TN",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/tennessee-tempo-fc-514627/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/207036-6.jpg",
+  "logo": "logos/tennessee-tempo-fc.png"
+ },
+ {
+  "id": "24578",
+  "name": "SCU Heat",
+  "slug": "scu-heat",
+  "conference": "Mid-Atlantic South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/scu-heat-24578/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/013199-4.jpg",
+  "logo": "logos/scu-heat.png"
+ },
+ {
+  "id": "662893",
+  "name": "Soda City FC",
+  "slug": "soda-city-fc",
+  "conference": "Mid-Atlantic South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/soda-city-fc-662893/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/066046-3.jpg",
+  "logo": "logos/soda-city-fc.png"
+ },
+ {
   "id": "228486",
   "name": "AAC Eagles",
   "slug": "aac-eagles",
@@ -68,6 +198,16 @@
   "upsl": "https://premier.upsl.com/teams/aac-eagles-228486/",
   "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/752325-3.jpg",
   "logo": "logos/aac-eagles.png"
+ },
+ {
+  "id": "430068",
+  "name": "Chicago Nation FC",
+  "slug": "chicago-nation-fc",
+  "conference": "Midwest Central",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/chicago-nation-fc-430068/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/033665-3.jpg",
+  "logo": "logos/chicago-nation-fc.png"
  },
  {
   "id": "274800",
@@ -108,6 +248,16 @@
   "upsl": "https://premier.upsl.com/teams/1974-newark-f-c-257533/",
   "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/01/615878.jpg",
   "logo": "logos/1974-newark-f-c.png"
+ },
+ {
+  "id": "58772",
+  "name": "Deportivo Rose City",
+  "slug": "deportivo-rose-city",
+  "conference": "Oregon",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/deportivo-rose-city-58772/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/079425-4.jpg",
+  "logo": "logos/deportivo-rose-city.png"
  },
  {
   "id": "434959",
@@ -188,6 +338,16 @@
   "upsl": "https://premier.upsl.com/teams/210-fc-253031/",
   "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/02/079100.jpg",
   "logo": "logos/210-fc.png"
+ },
+ {
+  "id": "895831",
+  "name": "Laredo Heat SC U23",
+  "slug": "laredo-heat-sc-u23",
+  "conference": "Texas Central - San Antonio",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/laredo-heat-sc-u23-895831/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/08/228868-1.jpg",
+  "logo": "logos/laredo-heat-sc-u23.png"
  },
  {
   "id": "13263",
