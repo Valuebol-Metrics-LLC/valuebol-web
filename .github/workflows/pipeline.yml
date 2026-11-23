@@ -1,0 +1,75 @@
+# Runs the UPSL data pipeline (copied from egudino20/amateur-football-dashboard):
+# schedules, results and standings for every season, rosters, goal scorers,
+# then ASI (Elo), Dixon-Coles predictions and projected standings.
+# Output: public/upsl/*.json, committed to main; the Pages deploy picks it up.
+#
+# First time: Actions > UPSL pipeline > Run workflow > mode "full" (a few hours).
+# After that it runs "update" on its own every day.
+name: UPSL pipeline
+
+on:
+  schedule:
+    - cron: '23 9 * * *' # daily, ~4-5am Eastern
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'full (every season) or update (newest seasons only)'
+        default: 'update'
+      skip_scorers:
+        description: 'Skip goal scorers (the slow part)? true/false'
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: upsl-pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+
+      # Scraped HTML + parquet history is kept between runs, so "update" only
+      # downloads the newest seasons and the site is never hit twice for old pages.
+      - name: Restore scraped history
+        uses: actions/cache/restore@v4
+        with:
+          path: pipeline/upsl/data
+          key: upsl-data-${{ github.run_id }}
+          restore-keys: upsl-data-
+
+      - name: Run pipeline
+        run: |
+          MODE="${{ github.event.inputs.mode || 'update' }}"
+          EXTRA=""
+          if [ "${{ github.event.inputs.skip_scorers }}" = "true" ]; then EXTRA="--skip-scorers"; fi
+          python pipeline/run.py "$MODE" $EXTRA
+
+      - name: Save scraped history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: pipeline/upsl/data
+          key: upsl-data-${{ github.run_id }}
+
+      - name: Commit website data
+        run: |
+          git config user.name "valuebol-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/upsl pipeline/upsl/data/premier/models
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "UPSL pipeline update $(date -u +%Y-%m-%d)"
+          git pull --rebase -X theirs origin main
+          git push

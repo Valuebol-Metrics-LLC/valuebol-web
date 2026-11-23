@@ -1,0 +1,9 @@
+# UPSL pipeline (copied from egudino20/amateur-football-dashboard/pipeline)
+pandas>=2.2,<3
+numpy>=1.26,<3
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+lxml>=5.0,<7
+html5lib>=1.1,<2
+pyarrow>=15,<26
+scipy>=1.11,<2

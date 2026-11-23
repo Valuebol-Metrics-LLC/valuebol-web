@@ -1,0 +1,5 @@
+# Regenerable scrape outputs and HTML cache
+raw_html/*.html
+**/*.parquet
+**/*.csv
+**/summary.json
