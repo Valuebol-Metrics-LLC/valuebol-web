@@ -1,1 +1,202 @@
-[]
+[
+ {
+  "id": "504599",
+  "name": "Alaska Rush",
+  "slug": "alaska-rush",
+  "conference": "Alaska",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/arctic-rush-504599/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/637054-1.jpg",
+  "logo": "logos/alaska-rush.png"
+ },
+ {
+  "id": "648844",
+  "name": "Alaska Thorns FC",
+  "slug": "alaska-thorns-fc",
+  "conference": "Alaska",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/alaska-thorns-fc-648844/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/05/800396.jpg",
+  "logo": "logos/alaska-thorns-fc.png"
+ },
+ {
+  "id": "554873",
+  "name": "Alaska Timbers",
+  "slug": "alaska-timbers",
+  "conference": "Alaska",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/alaska-timbers-554873/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/469812.jpg",
+  "logo": "logos/alaska-timbers.png"
+ },
+ {
+  "id": "732442",
+  "name": "AFC Academy",
+  "slug": "afc-academy",
+  "conference": "American North",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/afc-academy-732442/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/08/415064-1.jpg",
+  "logo": "logos/afc-academy.png"
+ },
+ {
+  "id": "637353",
+  "name": "314 Soccer Club STL",
+  "slug": "314-soccer-club-stl",
+  "conference": "Gateway",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/314-soccer-club-stl-637353/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/08/498734-2.jpg",
+  "logo": "logos/314-soccer-club-stl.png"
+ },
+ {
+  "id": "828065",
+  "name": "1859 FC",
+  "slug": "1859-fc",
+  "conference": "Gulf Coast",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/1859-fc-828065/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2026/09/439948.jpg",
+  "logo": "logos/1859-fc.png"
+ },
+ {
+  "id": "228486",
+  "name": "AAC Eagles",
+  "slug": "aac-eagles",
+  "conference": "Midwest Central",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/aac-eagles-228486/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/752325-3.jpg",
+  "logo": "logos/aac-eagles.png"
+ },
+ {
+  "id": "274800",
+  "name": "Al Madinah Wichita Football Club",
+  "slug": "al-madinah-wichita-football-club",
+  "conference": "Midwest South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/al-madinah-wichita-football-club-274800/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/12/171632-1.jpg",
+  "logo": "logos/al-madinah-wichita-football-club.png"
+ },
+ {
+  "id": "968331",
+  "name": "1826 Academy",
+  "slug": "1826-academy",
+  "conference": "Midwest West",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/1826-academy-968331/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/4/2023/02/852176-1.jpg",
+  "logo": "logos/1826-academy.png"
+ },
+ {
+  "id": "52997",
+  "name": "Acoreano Sport",
+  "slug": "acoreano-sport",
+  "conference": "NorCal",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/acoreano-sport-52997/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/071089-3.jpg",
+  "logo": "logos/acoreano-sport.png"
+ },
+ {
+  "id": "257533",
+  "name": "1974 Newark F.C",
+  "slug": "1974-newark-f-c",
+  "conference": "NorCal South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/1974-newark-f-c-257533/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/01/615878.jpg",
+  "logo": "logos/1974-newark-f-c.png"
+ },
+ {
+  "id": "434959",
+  "name": "ASC Antelope Valley",
+  "slug": "asc-antelope-valley",
+  "conference": "SoCal Central Coast",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/asc-antelope-valley-434959/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2023/08/805887-1.jpg",
+  "logo": "logos/asc-antelope-valley.png"
+ },
+ {
+  "id": "310944",
+  "name": "AV ALTA FC Academy",
+  "slug": "av-alta-fc-academy",
+  "conference": "SoCal Central Coast",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/av-alta-fc-academy-310944/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/12/982530.jpg",
+  "logo": "logos/av-alta-fc-academy.png"
+ },
+ {
+  "id": "533885",
+  "name": "Academia de Fútbol Miguel Ponce",
+  "slug": "academia-de-futbol-miguel-ponce",
+  "conference": "SoCal Central Coast",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/academia-de-futbol-miguel-ponce-533885/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/08/584294-1.jpg",
+  "logo": "logos/academia-de-futbol-miguel-ponce.png"
+ },
+ {
+  "id": "932753",
+  "name": "88Thirty",
+  "slug": "88thirty",
+  "conference": "SoCal North",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/88thirty-932753/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/01/775909.jpg",
+  "logo": "logos/88thirty.png"
+ },
+ {
+  "id": "502419",
+  "name": "AYSD D1 Academy",
+  "slug": "aysd-d1-academy",
+  "conference": "SoCal North",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/aysd-d1-academy-premier-north-502419/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2025/01/855181.jpg",
+  "logo": "logos/aysd-d1-academy.png"
+ },
+ {
+  "id": "424123",
+  "name": "ADG FC",
+  "slug": "adg-fc",
+  "conference": "SoCal South",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/adg-fc-424123/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2022/05/840252-4.jpg",
+  "logo": "logos/adg-fc.png"
+ },
+ {
+  "id": "314525",
+  "name": "ATX Blues",
+  "slug": "atx-blues",
+  "conference": "Texas Central - Austin",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/atx-blues-314525/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2026/02/072440-1.jpg",
+  "logo": "logos/atx-blues.png"
+ },
+ {
+  "id": "253031",
+  "name": "210 FC",
+  "slug": "210-fc",
+  "conference": "Texas Central - San Antonio",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/210-fc-253031/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/02/079100.jpg",
+  "logo": "logos/210-fc.png"
+ },
+ {
+  "id": "13263",
+  "name": "3 Cities FC",
+  "slug": "3-cities-fc",
+  "conference": "Washington",
+  "division": "premier",
+  "upsl": "https://premier.upsl.com/teams/3-cities-fc-13263/",
+  "logo_source": "https://upsl.com/wp-content/uploads/sites/5/2024/01/391346-2.jpg",
+  "logo": "logos/3-cities-fc.png"
+ }
+]

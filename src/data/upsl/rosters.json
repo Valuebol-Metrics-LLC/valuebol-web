@@ -1,0 +1,3167 @@
+{
+ "alaska-rush": {
+  "club": "Alaska Rush",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "alaska-thorns-fc": {
+  "club": "Alaska Thorns FC",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "alaska-timbers": {
+  "club": "Alaska Timbers",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "afc-academy": {
+  "club": "AFC Academy",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "314-soccer-club-stl": {
+  "club": "314 Soccer Club STL",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "1859-fc": {
+  "club": "1859 FC",
+  "players": [
+   {
+    "player": "Grayson Dupont",
+    "position": "Coach",
+    "appearances": 10
+   },
+   {
+    "player": "Paul Le Blanc",
+    "position": "Coach",
+    "appearances": 9
+   },
+   {
+    "player": "Grant Guthrie",
+    "position": "Admin",
+    "appearances": 9
+   },
+   {
+    "player": "Christopher L. Paz",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Axel Q. Agurcia",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Trace S. Roberts",
+    "position": "Goalkeeper",
+    "appearances": 8
+   },
+   {
+    "player": "Meifor Pitio",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Anthony A. Williams",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Javier E. Mitland",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Irwin G. Laboriel",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Arandy G. De Leon",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Kevin Rivera",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Grayson E. Bent",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Saad Garadi",
+    "position": "Defense",
+    "appearances": 7
+   },
+   {
+    "player": "Ashton C. Zeringue",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Willem P. Kelson",
+    "position": "Goalkeeper",
+    "appearances": 7
+   },
+   {
+    "player": "Jackson Henry H. DeGeorge",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Nick A. Perez",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Julian P. Schindelmeiser",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Luka R. Fabre",
+    "position": "Defense",
+    "appearances": 6
+   },
+   {
+    "player": "Jose A. Moreno",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Carlos Valencia Valencia",
+    "position": "Defense",
+    "appearances": 6
+   },
+   {
+    "player": "Michael C. Breaux",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Hutch J. Morris",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Adam J. Cervantes",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Victor Guerrero",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Caleb Evans",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Mason C. Senette",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Liam Zimmerman",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Ricardo Cervantes",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Andrew J. Allain",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Emerson N. Maldonado",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Charles O. Sale",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Soren A. Christensen",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Joseph C. Milner",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Russell Brown",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Angel Y. Vazquez",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "John A. Hernandez",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Marcus C. Torres",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Ivan R. Donjuan",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Franklin C. Seal",
+    "position": "Defense",
+    "appearances": 0
+   }
+  ]
+ },
+ "aac-eagles": {
+  "club": "AAC Eagles",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "al-madinah-wichita-football-club": {
+  "club": "Al Madinah Wichita Football Club",
+  "players": [
+   {
+    "player": "Cody Fitch",
+    "position": "Coach",
+    "appearances": 14
+   },
+   {
+    "player": "Daichi Saito",
+    "position": "Coach",
+    "appearances": 13
+   },
+   {
+    "player": "Victor Domingues",
+    "position": "Coach",
+    "appearances": 13
+   },
+   {
+    "player": "Khaled Jibbe",
+    "position": "Admin",
+    "appearances": 12
+   },
+   {
+    "player": "Cody Fitch",
+    "position": "Coach",
+    "appearances": 12
+   },
+   {
+    "player": "Trey Silmon",
+    "position": "Coach",
+    "appearances": 12
+   },
+   {
+    "player": "Adrian Perez",
+    "position": "Coach",
+    "appearances": 11
+   },
+   {
+    "player": "Safwan Islam",
+    "position": "Admin",
+    "appearances": 11
+   },
+   {
+    "player": "Robert W. Carson",
+    "position": "Forward",
+    "appearances": 11
+   },
+   {
+    "player": "Alvaro Marchal",
+    "position": "Goalkeeper",
+    "appearances": 11
+   },
+   {
+    "player": "Juan E. Zamora",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Trey Silmon",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Marcos Benavidez",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Abdullah Ahmed",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Gibran Villalobos",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Benjamin A. Scognamillo",
+    "position": "Midfield",
+    "appearances": 8
+   },
+   {
+    "player": "Ivan Quezada",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Keagan A. Lewis",
+    "position": "Goalkeeper",
+    "appearances": 8
+   },
+   {
+    "player": "Jovany Lopez",
+    "position": "Defense",
+    "appearances": 7
+   },
+   {
+    "player": "Ryoga Oki",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Sergio D. Najera",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Paulo C. Villalobos",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Zaid S. Sibaai",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Jehovah D. Narcisse",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Gabriel Okita",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Roman D. Scognamillo",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Nedas Vaivada",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Bader M. Nassar",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Tucker G. Gray",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Cameron J. Schroder",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Javaine T. Lindsay",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Kei Nagakura",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Muhamed Jammeh",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Othman Gherab",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Javaine T. Lindsay",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Brian A. Aleman",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Jorge Valentin",
+    "position": "Goalkeeper",
+    "appearances": 2
+   },
+   {
+    "player": "Diego A. Martinez",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Michihiro Koga",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Ahmed Amaadour",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Aron J. Ponce",
+    "position": "Goalkeeper",
+    "appearances": 1
+   },
+   {
+    "player": "Asa M. Moncivais",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Blake Arndt",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Muntader K. Almalky",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Jack Bagley-Etheridge",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Felix Tellez",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Daichi Saito",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Alexander Radu",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Dominic S. Zuniga",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Radley Arnold",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Adrien SOUVRAS",
+    "position": "Defense",
+    "appearances": 0
+   }
+  ]
+ },
+ "1826-academy": {
+  "club": "1826 Academy",
+  "players": [
+   {
+    "player": "Jabarti Warsame",
+    "position": "Coach",
+    "appearances": 12
+   },
+   {
+    "player": "Omar Mohamed",
+    "position": "Coach",
+    "appearances": 12
+   },
+   {
+    "player": "Jakob Popkin",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Mohamud O. Abdi",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Mubashir A. Nour",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Abdelhakim A. Ismail",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Abdirahman Shariff Hassan",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "Ahmed I. Aden",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Danny King",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Ayuub Ahmed",
+    "position": "Goalkeeper",
+    "appearances": 10
+   },
+   {
+    "player": "Tyler J. Beaupre",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Jabril M. Mohamud",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Omondi Ethan",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Alexandru I. Cernea",
+    "position": "Goalkeeper",
+    "appearances": 6
+   },
+   {
+    "player": "Farhan A. Mohamed",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Hassan M. Osman",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Mohamed S. Abdikadir",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Kellie Marah",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Aydarous Omar",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Yonis Egal",
+    "position": "Goalkeeper",
+    "appearances": 1
+   },
+   {
+    "player": "Abdirazak Mohamed",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Hussein A. Mohamed",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Guled A. Ali",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Salman Osman",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Zakariya M. Abdi",
+    "position": "Defense",
+    "appearances": 0
+   }
+  ]
+ },
+ "acoreano-sport": {
+  "club": "Acoreano Sport",
+  "players": [
+   {
+    "player": "Fabio Martins",
+    "position": "Coach",
+    "appearances": 23
+   },
+   {
+    "player": "Ramiz Sampuor",
+    "position": "Coach",
+    "appearances": 23
+   },
+   {
+    "player": "Joseph Diryawush",
+    "position": "Coach",
+    "appearances": 23
+   },
+   {
+    "player": "Eden Sandoval",
+    "position": "Midfield",
+    "appearances": 23
+   },
+   {
+    "player": "Edivaldo J. Yepez",
+    "position": "Defense",
+    "appearances": 22
+   },
+   {
+    "player": "Marc A. Matos",
+    "position": "Defense",
+    "appearances": 21
+   },
+   {
+    "player": "Fabio D. Martins",
+    "position": "Defense",
+    "appearances": 21
+   },
+   {
+    "player": "Hernan Garcia",
+    "position": "Defense",
+    "appearances": 21
+   },
+   {
+    "player": "Diego J. Da Rocha",
+    "position": "Midfield",
+    "appearances": 21
+   },
+   {
+    "player": "Aris W. Barrales",
+    "position": "Midfield",
+    "appearances": 20
+   },
+   {
+    "player": "Jonathan E. Rodriguez",
+    "position": "Forward",
+    "appearances": 19
+   },
+   {
+    "player": "Jose A. Ceballos",
+    "position": "Goalkeeper",
+    "appearances": 19
+   },
+   {
+    "player": "Julian A. Zaragoza",
+    "position": "Forward",
+    "appearances": 17
+   },
+   {
+    "player": "Luis E. Brambila",
+    "position": "Forward",
+    "appearances": 17
+   },
+   {
+    "player": "Beni Mejia-Alberto",
+    "position": "Midfield",
+    "appearances": 17
+   },
+   {
+    "player": "Joseph M. Mayorca",
+    "position": "Forward",
+    "appearances": 13
+   },
+   {
+    "player": "Ryan F. Da Rocha",
+    "position": "Defense",
+    "appearances": 13
+   },
+   {
+    "player": "Jose A. Becerra",
+    "position": "Midfield",
+    "appearances": 11
+   },
+   {
+    "player": "Sebastian E. Rios rios",
+    "position": "Goalkeeper",
+    "appearances": 10
+   },
+   {
+    "player": "Ezekiel Padilla",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Brian Machado",
+    "position": "Forward",
+    "appearances": 9
+   },
+   {
+    "player": "Jayden A. Pires",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Octavio Cervantes",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Jose A. Torres Gaxiola",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Alfonso Ocampo Chavez",
+    "position": "Forward",
+    "appearances": 7
+   },
+   {
+    "player": "Salvador Rodriguez",
+    "position": "Goalkeeper",
+    "appearances": 7
+   },
+   {
+    "player": "Blake B. Vitorino",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Jose J. Aceves",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Andres Velasquez",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Ezekiel I. Zaragoza",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Julian Lomeli",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Alejandro Avila",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Guillermo Ramirez",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Daniel Borges",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Roberto Mejia-Alberto",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "DAngelo N. Gonzalez",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Luis Manuel Jr Castaneda",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Samuel Pinal",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Angel G. Carrillo",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Ivan Mendoza",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Mattia Marsili",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Alfonso Cortez",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Iosef E. Huitron",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Dylan Isasi",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Adrian Yepez Yepez",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "RAFAEL ALCAUTER",
+    "position": "Midfield",
+    "appearances": 0
+   }
+  ]
+ },
+ "1974-newark-f-c": {
+  "club": "1974 Newark F.C",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "asc-antelope-valley": {
+  "club": "ASC Antelope Valley",
+  "players": [
+   {
+    "player": "PLACIDO CARRASCO NAVARRO",
+    "position": "Coach",
+    "appearances": 30
+   },
+   {
+    "player": "Eddy Aragon",
+    "position": "Coach",
+    "appearances": 29
+   },
+   {
+    "player": "Hany Helmy",
+    "position": "Coach",
+    "appearances": 25
+   },
+   {
+    "player": "Hadi Helmy",
+    "position": "Coach",
+    "appearances": 25
+   },
+   {
+    "player": "Baltazar Mendez",
+    "position": "Coach",
+    "appearances": 23
+   },
+   {
+    "player": "Emery Hernandez",
+    "position": "Admin",
+    "appearances": 22
+   },
+   {
+    "player": "Naive E. Arana",
+    "position": "Forward",
+    "appearances": 21
+   },
+   {
+    "player": "Kemmich A. Uribe",
+    "position": "Defense",
+    "appearances": 21
+   },
+   {
+    "player": "Tommy A. Vaquerano",
+    "position": "Forward",
+    "appearances": 21
+   },
+   {
+    "player": "Jose M. Soto",
+    "position": "Forward",
+    "appearances": 20
+   },
+   {
+    "player": "David Zendejas",
+    "position": "Goalkeeper",
+    "appearances": 20
+   },
+   {
+    "player": "Christian Gomez",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Christian H. Samayoa",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Cristopher E. Martinez",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "Ethan A. Maldonado",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Albert J. Ramirez",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Carlos A. Mendez",
+    "position": "Midfield",
+    "appearances": 11
+   },
+   {
+    "player": "Vicente Diaz",
+    "position": "Midfield",
+    "appearances": 10
+   },
+   {
+    "player": "Adrian Alvarez",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Kevin W. Alvarenga",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "Eduardo Lopez",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "Andrew A. Castillo",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Jarrett Reeser",
+    "position": "Forward",
+    "appearances": 9
+   },
+   {
+    "player": "Joshua A. Moran",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Luke Loy",
+    "position": "Forward",
+    "appearances": 7
+   },
+   {
+    "player": "Edgar Rodriguez",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Israel E. Aguilar",
+    "position": "Defense",
+    "appearances": 6
+   },
+   {
+    "player": "Diego M. Cabrera",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Eduardo J. Cazares",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Anthony Contreras Rueda",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Jorge F. Amezquita",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Ezekiel Garica",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Hany Helmy",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Andres A. Casillas",
+    "position": "Midfield",
+    "appearances": 4
+   },
+   {
+    "player": "Jean Marco Rodriguez",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Adam J. White",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Clayton Torr",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Juan L. Balaguer",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Lincoln O. Schreibfeder",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Julian Cervantes Gonzalez",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Carlos N. Mejia",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Jorge A. Solorzano",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Ike E. DSilva",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Simon Lopez",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Aiden M. Smith",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Justin Carrillo",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Nathan C. Patterson",
+    "position": "Goalkeeper",
+    "appearances": 1
+   },
+   {
+    "player": "Kwadwo Dua",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Darwin R. Lopez",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Ismail O. Nieves",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Miguel Ibarra",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Christian Serafin",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Nathan Nava",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Benjamin Inim",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Joseph Perez ledezma",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Alexander Perez Esparza",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Geovanny Salas",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Emilio Gonzalez",
+    "position": "Forward",
+    "appearances": 0
+   }
+  ]
+ },
+ "av-alta-fc-academy": {
+  "club": "AV ALTA FC Academy",
+  "players": [
+   {
+    "player": "Shonn Vasquez",
+    "position": "Coach",
+    "appearances": 37
+   },
+   {
+    "player": "Vanie Clarke",
+    "position": "Coach",
+    "appearances": 37
+   },
+   {
+    "player": "Zaki Tahari",
+    "position": "Admin",
+    "appearances": 32
+   },
+   {
+    "player": "Gilberto Ckarlos S. Mora",
+    "position": "Midfield",
+    "appearances": 31
+   },
+   {
+    "player": "Timothy E. Lopez",
+    "position": "Forward",
+    "appearances": 31
+   },
+   {
+    "player": "Juaquin Garcia Valdez",
+    "position": "Midfield",
+    "appearances": 26
+   },
+   {
+    "player": "Eduardo Ramirez Miranda",
+    "position": "Forward",
+    "appearances": 25
+   },
+   {
+    "player": "Jose A. Lopez",
+    "position": "Forward",
+    "appearances": 24
+   },
+   {
+    "player": "Lucas G. Gonzalez",
+    "position": "Defense",
+    "appearances": 23
+   },
+   {
+    "player": "Cole Johnson",
+    "position": "Midfield",
+    "appearances": 21
+   },
+   {
+    "player": "Angel D. Carbajal",
+    "position": "Forward",
+    "appearances": 21
+   },
+   {
+    "player": "Erik HERNANDEZ",
+    "position": "Midfield",
+    "appearances": 19
+   },
+   {
+    "player": "Diego E. Aviles",
+    "position": "Goalkeeper",
+    "appearances": 16
+   },
+   {
+    "player": "Kaleb A. Stokes",
+    "position": "Defense",
+    "appearances": 16
+   },
+   {
+    "player": "Sebastian Parada",
+    "position": "Midfield",
+    "appearances": 16
+   },
+   {
+    "player": "Joseph Gyamfi",
+    "position": "Goalkeeper",
+    "appearances": 15
+   },
+   {
+    "player": "Alexander Zamudio",
+    "position": "Goalkeeper",
+    "appearances": 15
+   },
+   {
+    "player": "Jesus A. Lopez",
+    "position": "Midfield",
+    "appearances": 15
+   },
+   {
+    "player": "Bryan L. Hernandez",
+    "position": "Defense",
+    "appearances": 14
+   },
+   {
+    "player": "Cyrus D. Roberts",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Jovany Garcia Valdez",
+    "position": "Forward",
+    "appearances": 11
+   },
+   {
+    "player": "Diego Hernandez",
+    "position": "Goalkeeper",
+    "appearances": 11
+   },
+   {
+    "player": "Matthew Hernandez",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Andrew Gutierrez",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Eduardo J. Sicaja",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Gerardo I. Sanchez",
+    "position": "Defense",
+    "appearances": 7
+   },
+   {
+    "player": "Diego A. Nunez",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Jorge A. Hernandez",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Gerson Saldana",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Adrian A. Morales",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Manuel E. Lopez",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Dylan Lumagui",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Joseph R. Rodriguez",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Adrian J. Villafranco",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Henry U. Pereira",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Salim Mohammadi",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Juan Rodriguez",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Cesar Valdez",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Elijah Madrid",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Diego Mellado",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Maxton C. Kury",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Abdel Halim K. Mohammed El",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Ricardo A. Marroquin",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Grayson N. Gilmore",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Gabriel S. Elias",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Jordan L. Montoya",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Marco A. Gonzalez",
+    "position": "Goalkeeper",
+    "appearances": 0
+   }
+  ]
+ },
+ "academia-de-futbol-miguel-ponce": {
+  "club": "Academia de Fútbol Miguel Ponce",
+  "players": [
+   {
+    "player": "Melissa Martinez",
+    "position": "Admin",
+    "appearances": 14
+   },
+   {
+    "player": "Teresa Gama",
+    "position": "Coach",
+    "appearances": 12
+   },
+   {
+    "player": "Eduardo Grados",
+    "position": "Coach",
+    "appearances": 11
+   },
+   {
+    "player": "Angel Martinez",
+    "position": "Admin",
+    "appearances": 10
+   },
+   {
+    "player": "Miguel Ponce",
+    "position": "Coach",
+    "appearances": 9
+   },
+   {
+    "player": "Fabian Caldera",
+    "position": "Goalkeeper",
+    "appearances": 6
+   },
+   {
+    "player": "Carlos Diaz",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Diego W. Che pop",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Eduardo Grados",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Miguel A. Ponce",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Ricardo Diaz",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Toni B. Prebanda",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Brandon D. Iuna",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Bryan D. Nunez diaz",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Issac Rivera",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Damian Aguirre",
+    "position": "-",
+    "appearances": 3
+   },
+   {
+    "player": "Jose A. Carrascal",
+    "position": "Goalkeeper",
+    "appearances": 3
+   },
+   {
+    "player": "Lennig Ortega",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Alan E. Velasco ángel",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Yahsid J. Torres",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Jaden I. Perez",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Diego Martinez-Acosta",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Humberto Salinas",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Daniel Franco",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Isaac Brizuela",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Miguel Basulto",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Jose Gurrola",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Michelle Corona",
+    "position": "Defense",
+    "appearances": 0
+   }
+  ]
+ },
+ "88thirty": {
+  "club": "88Thirty",
+  "players": [
+   {
+    "player": "Camille Lacey",
+    "position": "Coach",
+    "appearances": 27
+   },
+   {
+    "player": "Jason Clifford",
+    "position": "Coach",
+    "appearances": 27
+   },
+   {
+    "player": "Johan Medina",
+    "position": "Goalkeeper",
+    "appearances": 27
+   },
+   {
+    "player": "Diego Delgado",
+    "position": "Midfield",
+    "appearances": 25
+   },
+   {
+    "player": "Brian N. Torres Pacheco",
+    "position": "Forward",
+    "appearances": 25
+   },
+   {
+    "player": "Eli Rico-Torres",
+    "position": "Midfield",
+    "appearances": 24
+   },
+   {
+    "player": "Dante Medina",
+    "position": "Forward",
+    "appearances": 22
+   },
+   {
+    "player": "Samuel P. Taddeo",
+    "position": "Midfield",
+    "appearances": 21
+   },
+   {
+    "player": "Zeph Rico-Jarmillo",
+    "position": "Forward",
+    "appearances": 21
+   },
+   {
+    "player": "Felix Mesquita",
+    "position": "Midfield",
+    "appearances": 20
+   },
+   {
+    "player": "Yael Campoy",
+    "position": "Defense",
+    "appearances": 18
+   },
+   {
+    "player": "Gary Carbajal",
+    "position": "Midfield",
+    "appearances": 18
+   },
+   {
+    "player": "Andy Carbajal",
+    "position": "Midfield",
+    "appearances": 17
+   },
+   {
+    "player": "Isaiah Gutierrez",
+    "position": "Midfield",
+    "appearances": 15
+   },
+   {
+    "player": "Juan M. Urtiz",
+    "position": "Midfield",
+    "appearances": 15
+   },
+   {
+    "player": "Leyver F. Guzman",
+    "position": "Midfield",
+    "appearances": 15
+   },
+   {
+    "player": "Erick E. Guzman",
+    "position": "Midfield",
+    "appearances": 14
+   },
+   {
+    "player": "Brian Silva",
+    "position": "Defense",
+    "appearances": 14
+   },
+   {
+    "player": "Ronaldo Pineda",
+    "position": "Midfield",
+    "appearances": 14
+   },
+   {
+    "player": "Taylor F. Beardsworth-March",
+    "position": "Defense",
+    "appearances": 13
+   },
+   {
+    "player": "Liam G. Joslin",
+    "position": "Defense",
+    "appearances": 13
+   },
+   {
+    "player": "Dylan R. Graham",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Braeden J. Hatt",
+    "position": "Goalkeeper",
+    "appearances": 11
+   },
+   {
+    "player": "John Joslin",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Leo Sanchez",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "Alviery Jimenez",
+    "position": "Midfield",
+    "appearances": 10
+   },
+   {
+    "player": "Edson E. Alvarado",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Denilson F. Barco",
+    "position": "Midfield",
+    "appearances": 10
+   },
+   {
+    "player": "Robert Ronco",
+    "position": "Forward",
+    "appearances": 9
+   },
+   {
+    "player": "Daniel Yu",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Omar Alam",
+    "position": "Goalkeeper",
+    "appearances": 8
+   },
+   {
+    "player": "Emmanuel Bekele",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Marcel A. Salceda",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Rigoberto R. Morales",
+    "position": "Defense",
+    "appearances": 6
+   },
+   {
+    "player": "Kyle Mcleish",
+    "position": "Goalkeeper",
+    "appearances": 6
+   },
+   {
+    "player": "Christopher Guyot",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Wayne A. Castillo Jr",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Eldi Seiti",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Liam Murphy",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Jaxon T. Tonley",
+    "position": "Goalkeeper",
+    "appearances": 4
+   },
+   {
+    "player": "Tanner Greenlund",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Caleb Interiano",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Joseph W. Perkins",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Jesus Osorio",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Leonard Senne",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Archie Etherington",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Jad K. Othman",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Ryan Ouazzani",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Andrew R. Rivera",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Angel Gayosso",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Josiahs A. Palacios",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Francisco J. Rodriguez",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Paula Awad",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Jacob M. De La Cerda",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Jonathan Mazon",
+    "position": "Goalkeeper",
+    "appearances": 0
+   }
+  ]
+ },
+ "aysd-d1-academy": {
+  "club": "AYSD D1 Academy",
+  "players": [
+   {
+    "player": "Mohammadreza Kasraei",
+    "position": "Coach",
+    "appearances": 20
+   },
+   {
+    "player": "Omid Safapour",
+    "position": "Coach",
+    "appearances": 19
+   },
+   {
+    "player": "Mohammadli Pourmiri",
+    "position": "Coach",
+    "appearances": 16
+   },
+   {
+    "player": "Christoph Lutkemeyer",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "David Reynoso",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Lorenzo A. Zapata",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Rafael Gonzalez",
+    "position": "Forward",
+    "appearances": 11
+   },
+   {
+    "player": "Daniel Vega",
+    "position": "Midfield",
+    "appearances": 11
+   },
+   {
+    "player": "Dalton S. Garcia",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Luca A. Peyer",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Joao Pedro G. Teixeira",
+    "position": "Defense",
+    "appearances": 7
+   },
+   {
+    "player": "Brayan D. Rodriguez",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Nathan Disparte",
+    "position": "-",
+    "appearances": 5
+   },
+   {
+    "player": "Nikolas P. WheelerQuintanilla",
+    "position": "Midfield",
+    "appearances": 4
+   },
+   {
+    "player": "Max Leon Blass",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Thiago Arceno",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Julian A. Lopez",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Andrii Yurchenko",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Leonardo P. Aquino",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Renan Quenidi Borges dos Santos",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Shahdon Shoga",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Aaron I. Isaiah",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "André Ricardo Pereira",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Sina Khajehpour",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Gocha Zirakadze",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Bayan Samha",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Aras Jafarj",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Carlos V. Jara",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Matthew Thornton",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Fionn M. Brudos Costello",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Achraf Majhadi",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Oscar Hernandez",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Ramin Estadabadi",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Carlos Elizondo",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Kyle Marietta",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Estiven Rios",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Rustam Mihhailov",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Mohdazmi Alnazer",
+    "position": "Goalkeeper",
+    "appearances": 0
+   }
+  ]
+ },
+ "adg-fc": {
+  "club": "ADG FC",
+  "players": [
+   {
+    "player": "Player 1",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 2",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 3",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 4",
+    "position": "Coming Soon",
+    "appearances": 0
+   },
+   {
+    "player": "Player 5",
+    "position": "Coming Soon",
+    "appearances": 0
+   }
+  ]
+ },
+ "atx-blues": {
+  "club": "ATX Blues",
+  "players": [
+   {
+    "player": "Nicholas Waycaster",
+    "position": "Coach",
+    "appearances": 26
+   },
+   {
+    "player": "Brian Bauman",
+    "position": "Coach",
+    "appearances": 16
+   },
+   {
+    "player": "Joshua Brown",
+    "position": "Admin",
+    "appearances": 16
+   },
+   {
+    "player": "Gunnar Caswell",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "Aidan D. Shen",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Colin T. Donahue",
+    "position": "Forward",
+    "appearances": 12
+   },
+   {
+    "player": "Diego Jaquez",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "Jason Sumual",
+    "position": "Forward",
+    "appearances": 11
+   },
+   {
+    "player": "Ernesto J. Rivera",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Cade O. Mandrell",
+    "position": "Midfield",
+    "appearances": 11
+   },
+   {
+    "player": "Diego A. Martinez",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Hernan G. Alberico",
+    "position": "Midfield",
+    "appearances": 10
+   },
+   {
+    "player": "Emmett Allen",
+    "position": "Goalkeeper",
+    "appearances": 10
+   },
+   {
+    "player": "Deniz C. Sipahi",
+    "position": "Forward",
+    "appearances": 9
+   },
+   {
+    "player": "Donovan G. Josey",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Isaac F. Gutierrez",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Noel Meq",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Jesus Cabral",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Charles G. Walker",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Nico J. Hamelin",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Daniel Cardenas",
+    "position": "Midfield",
+    "appearances": 8
+   },
+   {
+    "player": "Wilman A. Hawkins",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Hendrich W. Hawkins",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Matvii Maidachenko",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Lucas E. CascoArias Gunz",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Nicholas J. Pickerill",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Christian Tookes",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Tomas Cabrales",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Campbell R. Cox",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Nicolas A. De Gouveia",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Julian L. Davis",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Owen Oberhoff",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Anton Bondarenko",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Chase L. Searight",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "David A. Ward",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "William J. Pendell",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Nolan L. Loftin",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Marcel S. Zouzouambe",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Santiago Martinez",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Jordan Daniel",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Finley S. Brenneman",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Clayton Greek",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Diego M. Rosa",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Rahul Kuthiala",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Jack C. Cox",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Zachary J. Shaddock",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Ishaan Saini",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Riley W. Ang",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Colin Lanier",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Samuel Nicol",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Beck O. Brenneman",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Joshua Wu",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Antoni Banka",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Noah C. Cush",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Rohan Chintakindi",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Hunter Brown",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Tejan Bhirud",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Valentin Lobos",
+    "position": "Midfield",
+    "appearances": 0
+   }
+  ]
+ },
+ "210-fc": {
+  "club": "210 FC",
+  "players": [
+   {
+    "player": "Keegan Woolley",
+    "position": "Coach",
+    "appearances": 28
+   },
+   {
+    "player": "Keegan Woolley",
+    "position": "Coach",
+    "appearances": 23
+   },
+   {
+    "player": "Jose Suarez",
+    "position": "Coach",
+    "appearances": 20
+   },
+   {
+    "player": "Jorge Arreola",
+    "position": "Midfield",
+    "appearances": 20
+   },
+   {
+    "player": "Edgar Hinojosa",
+    "position": "Midfield",
+    "appearances": 20
+   },
+   {
+    "player": "Miguel A. Velasquez",
+    "position": "Forward",
+    "appearances": 18
+   },
+   {
+    "player": "Jared A. Lucio",
+    "position": "Midfield",
+    "appearances": 18
+   },
+   {
+    "player": "Philip Duenez",
+    "position": "Forward",
+    "appearances": 17
+   },
+   {
+    "player": "Khai A. Knowles",
+    "position": "Forward",
+    "appearances": 16
+   },
+   {
+    "player": "Xavier Menefield",
+    "position": "Defense",
+    "appearances": 16
+   },
+   {
+    "player": "Max Garza",
+    "position": "Midfield",
+    "appearances": 14
+   },
+   {
+    "player": "Javier M. Estrada",
+    "position": "Defense",
+    "appearances": 14
+   },
+   {
+    "player": "Lars L. Willems",
+    "position": "Defense",
+    "appearances": 14
+   },
+   {
+    "player": "Abraham Arias",
+    "position": "Goalkeeper",
+    "appearances": 13
+   },
+   {
+    "player": "William Vidal",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Raymond M. Palmer",
+    "position": "Forward",
+    "appearances": 13
+   },
+   {
+    "player": "Jesus D. Pernia",
+    "position": "Midfield",
+    "appearances": 12
+   },
+   {
+    "player": "David Torres",
+    "position": "Midfield",
+    "appearances": 11
+   },
+   {
+    "player": "Jaydin M. La Rosa",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Jorge A. Patino",
+    "position": "Forward",
+    "appearances": 11
+   },
+   {
+    "player": "Theo G. Panteli",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Chase M. Rodriguez",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "Alexander J. Santiago",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "JayeDan Tate",
+    "position": "Goalkeeper",
+    "appearances": 9
+   },
+   {
+    "player": "Jose carlo J. Navarro",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Stephen J. Volpe",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Joshua J. Olivares",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Andre R. Meira do Nascimento",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Jacob M. Sandoval",
+    "position": "Forward",
+    "appearances": 7
+   },
+   {
+    "player": "Oliver M. Lira-Corona",
+    "position": "Goalkeeper",
+    "appearances": 7
+   },
+   {
+    "player": "Ethan A. Carrillo",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Alonso Fajardo Macias",
+    "position": "Midfield",
+    "appearances": 7
+   },
+   {
+    "player": "Jacob I. Olivares",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Dominiq X. Garza",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Jack Downes",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Cyrus Wiefue",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Miguel Leite",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Bryce J. Knell",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Isaiah A. Gonzalez",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Ryan Harley",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Clever Sibomana",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Luis F. Ramrez",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Romeo S. Padron",
+    "position": "Goalkeeper",
+    "appearances": 5
+   },
+   {
+    "player": "Jones Ferguson",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Daniel Prado",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Davor K. Stamenov",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Eric Gahire",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Vicente Sandoval",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Matthew C. Furst",
+    "position": "Midfield",
+    "appearances": 4
+   },
+   {
+    "player": "Patrick S. Bassett",
+    "position": "Goalkeeper",
+    "appearances": 4
+   },
+   {
+    "player": "Andrew J. Olive",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Kamath R. Avaneesh",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Noah LeMaster",
+    "position": "Goalkeeper",
+    "appearances": 3
+   },
+   {
+    "player": "Jabari Holtkamp",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Aarush Kamath",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Christopher T. Gonkarnue",
+    "position": "Midfield",
+    "appearances": 3
+   },
+   {
+    "player": "Fernando Facundo",
+    "position": "Goalkeeper",
+    "appearances": 3
+   },
+   {
+    "player": "Jesus Lopez",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Jose E. Suarez",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Jose A. Castro",
+    "position": "Defense",
+    "appearances": 2
+   },
+   {
+    "player": "Curtis W. Fitzgerald",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Chima O. Onyeahasi",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Joel A. Lucio",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Gavin Latas",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Epo J. Kwizera",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Aidan Harris",
+    "position": "Goalkeeper",
+    "appearances": 2
+   },
+   {
+    "player": "Justin A. Rojas",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Danny A. McKeague",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Noe I. Lopez",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Kyle W. Davis",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Keegan T. Woolley",
+    "position": "Midfield",
+    "appearances": 1
+   },
+   {
+    "player": "Alejandro Gallegos",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Luke W. Lopez",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Johnathan E. Arzu",
+    "position": "Defense",
+    "appearances": 1
+   },
+   {
+    "player": "Max Melbourne",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Isaac Maldonado",
+    "position": "Forward",
+    "appearances": 1
+   },
+   {
+    "player": "Jonathan M. Sanchez",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Filippo Gambacorta",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Alek Melo",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Paul G. Alvarez",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Lane G. Green",
+    "position": "Goalkeeper",
+    "appearances": 0
+   },
+   {
+    "player": "Brayden A. Rodriguez",
+    "position": "Goalkeeper",
+    "appearances": 0
+   }
+  ]
+ },
+ "3-cities-fc": {
+  "club": "3 Cities FC",
+  "players": [
+   {
+    "player": "Marco Marmolejo",
+    "position": "Coach",
+    "appearances": 15
+   },
+   {
+    "player": "Jose Cueva",
+    "position": "Coach",
+    "appearances": 14
+   },
+   {
+    "player": "Dalton L. Mauzay",
+    "position": "Goalkeeper",
+    "appearances": 14
+   },
+   {
+    "player": "Emilio Leal",
+    "position": "Defense",
+    "appearances": 14
+   },
+   {
+    "player": "Diego J. Gomez Alvarado",
+    "position": "Forward",
+    "appearances": 13
+   },
+   {
+    "player": "Mario Jacobo",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Jose A. Botello",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Angel Castillo",
+    "position": "Midfield",
+    "appearances": 13
+   },
+   {
+    "player": "Hector Castillo",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "Jonas Olvera",
+    "position": "Defense",
+    "appearances": 12
+   },
+   {
+    "player": "Ian O. Martinez",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Pablo Castillo",
+    "position": "Defense",
+    "appearances": 11
+   },
+   {
+    "player": "Damian A. Martinez",
+    "position": "Defense",
+    "appearances": 10
+   },
+   {
+    "player": "Missael A. Lopez",
+    "position": "Forward",
+    "appearances": 10
+   },
+   {
+    "player": "Emilio J. Meraz Rodriguez",
+    "position": "Midfield",
+    "appearances": 9
+   },
+   {
+    "player": "Abel H. Valdez",
+    "position": "Defense",
+    "appearances": 9
+   },
+   {
+    "player": "Leobardo Pardo",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Reily Sanchez",
+    "position": "Forward",
+    "appearances": 8
+   },
+   {
+    "player": "Esteban Hernandez",
+    "position": "Midfield",
+    "appearances": 8
+   },
+   {
+    "player": "Francisco Silva",
+    "position": "Midfield",
+    "appearances": 8
+   },
+   {
+    "player": "Anthony V. Rodriguez",
+    "position": "Defense",
+    "appearances": 8
+   },
+   {
+    "player": "Jessy Medina",
+    "position": "Defense",
+    "appearances": 6
+   },
+   {
+    "player": "Jose M. Corona",
+    "position": "Goalkeeper",
+    "appearances": 6
+   },
+   {
+    "player": "Jose Meraz",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Jesus Meraz Rodriguez",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Adrian Arangure",
+    "position": "Forward",
+    "appearances": 6
+   },
+   {
+    "player": "Cinjin Toledo",
+    "position": "Midfield",
+    "appearances": 6
+   },
+   {
+    "player": "Erick A. Cruz",
+    "position": "Defense",
+    "appearances": 5
+   },
+   {
+    "player": "Christian J. Valencia",
+    "position": "Midfield",
+    "appearances": 5
+   },
+   {
+    "player": "Joshua M. Vega",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Marco A. Almazan",
+    "position": "Forward",
+    "appearances": 5
+   },
+   {
+    "player": "Marco A. Lopez",
+    "position": "Midfield",
+    "appearances": 4
+   },
+   {
+    "player": "Michael Rojas",
+    "position": "Forward",
+    "appearances": 4
+   },
+   {
+    "player": "Antonio Garcia",
+    "position": "Defense",
+    "appearances": 4
+   },
+   {
+    "player": "Jose Luis Espindola Zamora",
+    "position": "Goalkeeper",
+    "appearances": 4
+   },
+   {
+    "player": "Jakob Avila",
+    "position": "Defense",
+    "appearances": 3
+   },
+   {
+    "player": "Daniel Reyes",
+    "position": "Forward",
+    "appearances": 3
+   },
+   {
+    "player": "Cristian Sanchez",
+    "position": "Midfield",
+    "appearances": 2
+   },
+   {
+    "player": "Luis L. Rodriguez",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Juan E. Hernandez",
+    "position": "Forward",
+    "appearances": 2
+   },
+   {
+    "player": "Marco A. Marmolejo",
+    "position": "Forward",
+    "appearances": 0
+   },
+   {
+    "player": "Edwin Aquino",
+    "position": "Midfield",
+    "appearances": 0
+   },
+   {
+    "player": "Jairo G. Hernandez",
+    "position": "Defense",
+    "appearances": 0
+   },
+   {
+    "player": "Michael A. Bustos",
+    "position": "Defense",
+    "appearances": 0
+   }
+  ]
+ }
+}
