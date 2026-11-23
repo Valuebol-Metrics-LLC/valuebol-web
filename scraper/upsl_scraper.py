@@ -345,6 +345,9 @@ def load_json(path: Path, default):
 
 
 def select(teams, args):
+    if getattr(args, "name", None):
+        wanted = [n.lower() for n in args.name]
+        teams = [t for t in teams if any(w in t["name"].lower() for w in wanted)]
     if args.only:
         teams = [t for t in teams if subdomain(t["upsl"]) == args.only]
     return teams[: args.limit] if args.limit else teams
@@ -464,6 +467,7 @@ def main(argv=None):
     p.add_argument("command", choices=["teams", "rosters", "results", "all"])
     p.add_argument("--limit", type=int)
     p.add_argument("--only", help="UPSL subdomain, e.g. premier or division1")
+    p.add_argument("--name", action="append", help="only clubs whose name contains this (repeatable)")
     p.add_argument("--refresh", action="store_true")
     p.add_argument("--selenium", action="store_true")
     args = p.parse_args(argv)

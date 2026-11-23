@@ -13,6 +13,9 @@ on:
       limit:
         description: 'Only the first N clubs (blank = all)'
         default: ''
+      names:
+        description: 'Only clubs whose names contain these words, comma-separated (blank = all)'
+        default: ''
 
 permissions:
   contents: write
@@ -34,7 +37,10 @@ jobs:
         run: |
           ARGS="${{ github.event.inputs.command || 'all' }}"
           if [ -n "${{ github.event.inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"; fi
-          python scraper/upsl_scraper.py $ARGS
+          NAMES=()
+          IFS=',' read -ra PARTS <<< "${{ github.event.inputs.names }}"
+          for n in "${PARTS[@]}"; do n="$(echo "$n" | xargs)"; [ -n "$n" ] && NAMES+=(--name "$n"); done
+          python scraper/upsl_scraper.py $ARGS "${NAMES[@]}"
       - name: Commit changes
         run: |
           git config user.name "valuebol-bot"
