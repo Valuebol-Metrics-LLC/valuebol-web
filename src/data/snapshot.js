@@ -121,4 +121,5 @@ export const videos = [
   { id: 'Nyl4RscOKl0', kind: 'highlights', title: 'UFA Lawrenceville vs Pachuca GA, UPSL Georgia Premier Division', channel: 'Atlantic Soccer Media Group', when: '1 month ago', clubs: ['UFA Lawrenceville', 'Pachuca Georgia'] },
   { id: 'fRnmXa6UGao', kind: 'highlights', title: 'LA Dynamo 2-0 Rose City FC, UPSL Playoffs', channel: 'LA Dynamo', when: '11 months ago', clubs: ['Los Angeles Dynamo', 'Rose City FC'] },
   { id: 'srkMsjMqJsQ', kind: 'highlights', title: 'Columbus Crew Academy vs Chicago Nation FC, UPSL National Round of 16', channel: 'United Premier Soccer League UPSL', when: '2 years ago', clubs: ['Columbus Crew Academy', 'Chicago Nation FC'] },
+  { id: 'JO1pOp8Z8-I', kind: 'full', title: 'UPSL KY-TN Conference Final: Tennessee Tempo FC vs Tennessee United Soccer Club', channel: 'Tempo Talks (Tennessee Tempo FC)', when: '5 months ago', clubs: ['Tennessee Tempo FC', 'Tennessee United Soccer Club'] },
 ];
