@@ -1,0 +1,49 @@
+name: Fetch brand assets
+
+# Manual helper: downloads logo images from a page (default: the UPSL site)
+# and uploads them as a workflow artifact for use in social graphics.
+on:
+  workflow_dispatch:
+    inputs:
+      page:
+        description: Page to scan for logo images
+        default: https://premier.upsl.com/
+      extra:
+        description: Optional extra image URLs (space separated)
+        default: ""
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download logo candidates
+        env:
+          PAGE: ${{ inputs.page }}
+          EXTRA: ${{ inputs.extra }}
+        run: |
+          mkdir -p assets
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36"
+          curl -sSL -A "$UA" "$PAGE" -o assets/page.html || true
+          python3 - <<'PY'
+          import re, os, urllib.parse
+          page = os.environ["PAGE"]
+          html = open("assets/page.html", encoding="utf-8", errors="ignore").read()
+          urls = set(re.findall(r'(?:src|href|content|data-src)=["\']([^"\']+\.(?:png|svg|webp|jpe?g)[^"\']*)', html, re.I))
+          urls |= set(re.findall(r'https?://[^"\'\s)]+\.(?:png|svg|webp|jpe?g)', html, re.I))
+          keep = [urllib.parse.urljoin(page, u) for u in urls if re.search(r'logo|upsl|brand|icon', u, re.I)]
+          keep += os.environ.get("EXTRA", "").split()
+          open("assets/urls.txt", "w").write("\n".join(sorted(set(keep))))
+          print("\n".join(sorted(set(keep))))
+          PY
+          i=0
+          while read -r u; do
+            [ -z "$u" ] && continue
+            i=$((i+1))
+            name=$(basename "${u%%\?*}")
+            curl -sSL -A "$UA" "$u" -o "assets/${i}-${name}" || true
+          done < assets/urls.txt
+          ls -la assets
+      - uses: actions/upload-artifact@v4
+        with:
+          name: brand-assets
+          path: assets/
